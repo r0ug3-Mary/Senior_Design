@@ -119,6 +119,10 @@
      <property name="layoutDirection">
       <enum>Qt::RightToLeft</enum>
      </property>
+     <property name="styleSheet">
+      <string notr="true">font: bold 14px;
+    color: white;</string>
+     </property>
      <property name="text">
       <string>Home</string>
      </property>

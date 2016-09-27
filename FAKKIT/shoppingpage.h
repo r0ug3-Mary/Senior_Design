@@ -18,6 +18,12 @@ public:
 private slots:
     void on_HomeButton3_clicked();
 
+    void on_AddButton_clicked();
+
+    void on_RemoveItem_clicked();
+
+    void on_SaveList_clicked();
+
 private:
     Ui::ShoppingPage *ui;
 };

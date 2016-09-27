@@ -14,14 +14,30 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(255, 255, 255);</string>
+   <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QTextEdit" name="dbOutput"/>
+    <widget class="QTextEdit" name="dbOutput">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(168, 165, 173);</string>
+     </property>
+    </widget>
    </item>
    <item>
     <widget class="QPushButton" name="HomeButton">
+     <property name="font">
+      <font>
+       <pointsize>-1</pointsize>
+       <weight>75</weight>
+       <italic>false</italic>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: bold 14px;
+    color: white;</string>
+     </property>
      <property name="text">
       <string>Home</string>
      </property>

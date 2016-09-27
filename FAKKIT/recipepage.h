@@ -1,6 +1,7 @@
 #ifndef RECIPEPAGE_H
 #define RECIPEPAGE_H
-
+#include <QSqlDatabase>
+#include <QtDebug>
 #include <QDialog>
 
 namespace Ui {
@@ -20,8 +21,22 @@ private slots:
 
     void on_SearchButton_clicked();
 
+    void on_MoveOver_clicked();
+
 private:
     Ui::RecipePage *ui;
 };
+
+/*
+class DbManager2
+{
+public:
+    DbManager2(const QString& path);
+
+
+private:
+    QSqlDatabase m_db;
+};
+*/
 
 #endif // RECIPEPAGE_H

@@ -8,17 +8,19 @@
 #include <QSqlError>
 #include <QSqlRecord>
 
-static const QString path = "C:/Users/Piti/Desktop/QTProjects/FAKKIT/fakdb2.db";
+static const QString path = "/db/fakdb4.db";
 
 InventoryPage::InventoryPage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::InventoryPage)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color:#626065;");
+
     DbManager db(path);
-    qDebug() << "Persons in db:";
+    qDebug() << "Stuff in db:";
     QSqlQuery query;
-    query.exec("SELECT * FROM Main");
+    query.exec("SELECT * FROM codes");
     int idName = query.record().indexOf("name");
     while (query.next())
         {

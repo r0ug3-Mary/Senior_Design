@@ -1,16 +1,39 @@
 #include "recipepage.h"
 #include "ui_recipepage.h"
 #include "fak.h"
+#include "inventorypage.h"
 #include <QProcess>
 #include <QtCore/QTextstream>
 #include <QtCore/QFile>
 #include <QPushButton>
+#include <QtDebug>
+#include "QtDebug"
+#include <QSqlQuery>
+#include <QSqlError>
+#include <QSqlRecord>
+
+static const QString path = ":/db/fakdb.db";
 
 RecipePage::RecipePage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::RecipePage)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color:#626065;");
+
+    DbManager db(path);
+    qDebug() << "Stuff in db:";
+    QSqlQuery query;
+    query.exec("SELECT * FROM codes");
+    int idName = query.record().indexOf("name");
+    while (query.next())
+        {
+            QString name = query.value(idName).toString();
+            qDebug() << "===" << name;
+            //ui->dbOutput->setPlainText(name);
+            ui->InventoryList->append(name);
+        }
+
 }
 
 RecipePage::~RecipePage()
@@ -25,12 +48,10 @@ void RecipePage::on_HomeButton2_clicked()
 
 void RecipePage::on_SearchButton_clicked()
 {
-    QString inp = ui->lineEdit1->text();
-    QProcess p;
-    QStringList params;
-    params << "RecipeLookUpPython.py -arg1 arg1";
-    p.start("python", params);
-    p.waitForFinished(-1);
-    QString p_stdout = p.readAllStandardOutput();
-    ui->textBrowser1->setPlainText(p_stdout);
+
+}
+
+void RecipePage::on_MoveOver_clicked()
+{
+
 }

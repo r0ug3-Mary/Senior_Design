@@ -14,8 +14,7 @@
    <string>Dialog</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-image: url(:/fridgeimg.JPG);
-</string>
+   <string notr="true"/>
   </property>
   <widget class="QPushButton" name="HomeButton3">
    <property name="geometry">
@@ -26,8 +25,84 @@
      <height>28</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">font: bold 14px;
+    color: white;</string>
+   </property>
    <property name="text">
     <string>Home</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="ShoppingList">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>40</y>
+     <width>256</width>
+     <height>251</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(168, 165, 173);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>New Item</string>
+    </property>
+    <property name="flags">
+     <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+    </property>
+   </item>
+  </widget>
+  <widget class="QPushButton" name="AddButton">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>80</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: bold 14px;
+    color: white;</string>
+   </property>
+   <property name="text">
+    <string>Add To List</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="RemoveItem">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>110</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: bold 14px;
+    color: white;</string>
+   </property>
+   <property name="text">
+    <string>Remove Item</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="SaveList">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>140</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: bold 14px;
+    color: white;</string>
+   </property>
+   <property name="text">
+    <string>Save List</string>
    </property>
   </widget>
  </widget>
@@ -50,4 +125,7 @@
    </hints>
   </connection>
  </connections>
+ <slots>
+  <signal>addItem()</signal>
+ </slots>
 </ui>

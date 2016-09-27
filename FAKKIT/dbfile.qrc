@@ -1,6 +1,5 @@
 <RCC>
     <qresource prefix="/">
-        <file>fakdb.db</file>
-        <file>fakdb2.db</file>
+        <file>db/fakdb4.db</file>
     </qresource>
 </RCC>

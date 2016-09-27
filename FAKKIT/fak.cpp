@@ -4,12 +4,14 @@
 #include "recipepage.h"
 #include "shoppingpage.h"
 #include "viewpage.h"
+#include "QPixmap"
 
 FAK::FAK(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::FAK)
 {
     ui->setupUi(this);
+    this->setStyleSheet("background-color:#626065;");
 }
 
 FAK::~FAK()
