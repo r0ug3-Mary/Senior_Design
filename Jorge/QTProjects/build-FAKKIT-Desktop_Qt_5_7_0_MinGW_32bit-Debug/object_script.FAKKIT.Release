@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\fak.o
+./release\inventorypage.o
+./release\recipepage.o
+./release\shoppingpage.o
+./release\viewpage.o
+./release\qrc_insidefridge.o
+./release\qrc_dbfile.o
+./release\qrc_buttonpics.o
+./release\moc_fak.o
+./release\moc_inventorypage.o
+./release\moc_recipepage.o
+./release\moc_shoppingpage.o
+./release\moc_viewpage.o
+);
