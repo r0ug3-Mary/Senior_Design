@@ -2,6 +2,7 @@
 #include "ui_recipepage.h"
 #include "fak.h"
 #include "inventorypage.h"
+#include "reciperesultspage.h"
 #include <QProcess>
 #include <QtCore/QTextstream>
 #include <QtCore/QFile>
@@ -12,7 +13,7 @@
 #include <QSqlError>
 #include <QSqlRecord>
 
-static const QString path = ":/db/fakdb.db";
+static const QString path = "C:/Users/r0ug3_h@cK3r/Documents/GitHub/Sr.GUI/FAKKIT/db/fakdb4.db";
 
 RecipePage::RecipePage(QWidget *parent) :
     QDialog(parent),
@@ -48,7 +49,9 @@ void RecipePage::on_HomeButton2_clicked()
 
 void RecipePage::on_SearchButton_clicked()
 {
-
+    RecipeResultsPage reciperesultsPage;
+    reciperesultsPage.setModal(true);
+    reciperesultsPage.exec();
 }
 
 void RecipePage::on_MoveOver_clicked()

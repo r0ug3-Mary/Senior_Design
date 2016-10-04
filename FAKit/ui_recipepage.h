@@ -28,7 +28,7 @@ QT_BEGIN_NAMESPACE
 class Ui_RecipePage
 {
 public:
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_8;
     QLabel *labelcurr;
@@ -51,16 +51,16 @@ public:
             RecipePage->setObjectName(QStringLiteral("RecipePage"));
         RecipePage->resize(456, 325);
         RecipePage->setStyleSheet(QStringLiteral(""));
-        widget = new QWidget(RecipePage);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(9, 9, 438, 268));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(RecipePage);
+        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
+        layoutWidget->setGeometry(QRect(9, 9, 438, 268));
+        verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(-1, -1, 0, -1);
-        labelcurr = new QLabel(widget);
+        labelcurr = new QLabel(layoutWidget);
         labelcurr->setObjectName(QStringLiteral("labelcurr"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
@@ -77,7 +77,7 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer);
 
-        labellook = new QLabel(widget);
+        labellook = new QLabel(layoutWidget);
         labellook->setObjectName(QStringLiteral("labellook"));
         QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Minimum);
         sizePolicy1.setHorizontalStretch(0);
@@ -94,17 +94,18 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        InventoryList = new QTextEdit(widget);
+        InventoryList = new QTextEdit(layoutWidget);
         InventoryList->setObjectName(QStringLiteral("InventoryList"));
         QSizePolicy sizePolicy2(QSizePolicy::Expanding, QSizePolicy::Expanding);
         sizePolicy2.setHorizontalStretch(0);
         sizePolicy2.setVerticalStretch(0);
         sizePolicy2.setHeightForWidth(InventoryList->sizePolicy().hasHeightForWidth());
         InventoryList->setSizePolicy(sizePolicy2);
+        InventoryList->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
 
         horizontalLayout->addWidget(InventoryList);
 
-        MoveOver = new QPushButton(widget);
+        MoveOver = new QPushButton(layoutWidget);
         MoveOver->setObjectName(QStringLiteral("MoveOver"));
         QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
@@ -117,8 +118,9 @@ public:
 
         horizontalLayout->addWidget(MoveOver);
 
-        RecipeParams = new QTextEdit(widget);
+        RecipeParams = new QTextEdit(layoutWidget);
         RecipeParams->setObjectName(QStringLiteral("RecipeParams"));
+        RecipeParams->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
 
         horizontalLayout->addWidget(RecipeParams);
 
