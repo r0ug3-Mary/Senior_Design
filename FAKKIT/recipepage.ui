@@ -16,7 +16,7 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>9</x>
@@ -92,14 +92,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QTextEdit" name="InventoryList">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
+       <widget class="QListView" name="InventoryList"/>
       </item>
       <item>
        <widget class="QPushButton" name="MoveOver">
@@ -216,6 +209,9 @@
     </item>
    </layout>
   </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>horizontalLayoutWidget_2</zorder>
+  <zorder>SearchButton</zorder>
  </widget>
  <resources/>
  <connections>
@@ -226,8 +222,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>421</x>
-     <y>196</y>
+     <x>439</x>
+     <y>293</y>
     </hint>
     <hint type="destinationlabel">
      <x>422</x>

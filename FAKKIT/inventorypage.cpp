@@ -8,7 +8,7 @@
 #include <QSqlError>
 #include <QSqlRecord>
 
-static const QString path = "/db/fakdb4.db";
+static const QString path = "C:/Users/r0ug3_h@cK3r/Documents/GitHub/Sr.GUI/FAKKIT/db/fakdb4.db";
 
 InventoryPage::InventoryPage(QWidget *parent) :
     QDialog(parent),
