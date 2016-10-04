@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>456</width>
-    <height>325</height>
+    <width>660</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,14 +19,15 @@
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>9</y>
-     <width>438</width>
-     <height>268</height>
+     <x>0</x>
+     <y>0</y>
+     <width>651</width>
+     <height>551</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
+<<<<<<< HEAD
      <layout class="QHBoxLayout" name="horizontalLayout_8">
       <property name="rightMargin">
        <number>0</number>
@@ -166,40 +167,68 @@
       <property name="wordWrap">
        <bool>true</bool>
       </property>
+=======
+     <widget class="QTableWidget" name="tableWidget">
+      <row>
+       <property name="text">
+        <string>New Row</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </row>
+      <column>
+       <property name="text">
+        <string>Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Full</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Medium</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Low</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Empty</string>
+       </property>
+      </column>
+      <item row="0" column="1">
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flags">
+        <set>ItemIsSelectable|ItemIsEditable|ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+       </property>
+      </item>
+>>>>>>> origin/Jorge
      </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="SearchButton">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: bold 14px;
-    color: white;</string>
-      </property>
-      <property name="text">
-       <string>Search</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <spacer name="horizontalSpacer_2">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeType">
-       <enum>QSizePolicy::Fixed</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>38</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
     </item>
     <item>
      <widget class="QPushButton" name="HomeButton2">
@@ -211,10 +240,6 @@
       </property>
       <property name="layoutDirection">
        <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: bold 14px;
-    color: white;</string>
       </property>
       <property name="text">
        <string>Home</string>

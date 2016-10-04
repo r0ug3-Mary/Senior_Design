@@ -19,6 +19,12 @@ public:
 private slots:
     void on_HomeButton_clicked();
 
+    void on_LowEmpButton_clicked();
+
+    void on_RemoveButton_clicked();
+
+    void on_AllButton_clicked();
+
 private:
     Ui::InventoryPage *ui;
 };
@@ -27,7 +33,6 @@ class DbManager
 {
 public:
     DbManager(const QString& path);
-
 
 private:
     QSqlDatabase m_db;

@@ -9,8 +9,8 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     FAK w;
-    w.setStyleSheet("background-color:#626065;");
-    //w.setStyleSheet("background-image:../fridgeimg.jpg");
+    //w.setStyleSheet("background-color:#89cff0;");
+    //w.setStyleSheet("background-image:/Users/Desktop/fridgeimg.JPG");
     w.show();
 
     return a.exec();
