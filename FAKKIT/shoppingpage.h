@@ -1,6 +1,6 @@
 #ifndef SHOPPINGPAGE_H
 #define SHOPPINGPAGE_H
-
+#include <QSqlDatabase>
 #include <QDialog>
 
 namespace Ui {
@@ -18,14 +18,22 @@ public:
 private slots:
     void on_HomeButton3_clicked();
 
-    void on_AddButton_clicked();
-
-    void on_RemoveItem_clicked();
-
-    void on_SaveList_clicked();
+    void on_addButton_clicked();
 
 private:
     Ui::ShoppingPage *ui;
 };
+
+class DbManager2
+{
+public:
+    DbManager2(const QString& path);
+
+
+private:
+    QSqlDatabase m_db;
+};
+
+
 
 #endif // SHOPPINGPAGE_H

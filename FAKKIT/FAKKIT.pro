@@ -37,4 +37,5 @@ DISTFILES += \
 
 RESOURCES += \
     insidefridge.qrc \
-    dbfile.qrc
+    dbfile.qrc \
+    buttonpics.qrc

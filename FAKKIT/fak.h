@@ -22,7 +22,7 @@ private slots:
 
     void on_ShoppingButton_clicked();
 
-    void on_pushButton_clicked();
+    void on_ViewButton_clicked();
 
 private:
     Ui::FAK *ui;

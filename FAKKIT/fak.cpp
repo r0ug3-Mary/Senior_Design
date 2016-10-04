@@ -5,13 +5,27 @@
 #include "shoppingpage.h"
 #include "viewpage.h"
 #include "QPixmap"
+#include "QSize"
 
 FAK::FAK(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::FAK)
 {
     ui->setupUi(this);
-    this->setStyleSheet("background-color:#626065;");
+
+    /*QPixmap f1("C:/Users/Piti/Desktop/fridge1.jpg");
+
+    // get label dimensions
+    int ww = ui->InventoryButton->width();
+    int hh = ui->InventoryButton->height();
+
+    // set a scaled pixmap to a w x h window keeping its aspect ratio
+    //ui->InventoryButton->setPixmap(f1.scaled(ww,hh,Qt::KeepAspectRatio));*/
+
+    /*int ww = ui->InventoryButton->width();
+    int hh = ui->InventoryButton->height();
+    ui->InventoryButton->setIcon(QIcon("C:/Users/Piti/Desktop/fridge1.jpeg"));
+    ui->InventoryButton->setIconSize(QSize(ww,hh));*/
 }
 
 FAK::~FAK()
@@ -41,7 +55,7 @@ void FAK::on_ShoppingButton_clicked()
     shoppingPage.exec();
 }
 
-void FAK::on_pushButton_clicked()
+void FAK::on_ViewButton_clicked()
 {
     ViewPage viewPage;
     viewPage.setModal(true);
