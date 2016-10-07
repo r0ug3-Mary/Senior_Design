@@ -17,20 +17,23 @@ SOURCES += main.cpp\
         fak.cpp \
     inventorypage.cpp \
     recipepage.cpp \
-    shoppingpage.cpp \
-    viewpage.cpp
+    viewpage.cpp \
+    shoppingpage1.cpp \
+    shoppingpagesaved.cpp
 
 HEADERS  += fak.h \
     inventorypage.h \
     recipepage.h \
-    shoppingpage.h \
-    viewpage.h
+    viewpage.h \
+    shoppingpage1.h \
+    shoppingpagesaved.h
 
 FORMS    += fak.ui \
     inventorypage.ui \
     recipepage.ui \
-    shoppingpage.ui \
-    viewpage.ui
+    viewpage.ui \
+    shoppingpage1.ui \
+    shoppingpagesaved.ui
 
 DISTFILES += \
     RecipeLookUpPython.py

@@ -2,10 +2,14 @@
 #include "ui_fak.h"
 #include "inventorypage.h"
 #include "recipepage.h"
-#include "shoppingpage.h"
 #include "viewpage.h"
 #include "QPixmap"
 #include "QSize"
+#include "shoppingpage1.h"
+#include "shoppingpagesaved.h"
+#include "QtCore"
+#include "QtGui"
+#include "QMessageBox"
 
 FAK::FAK(QWidget *parent) :
     QMainWindow(parent),
@@ -50,9 +54,33 @@ void FAK::on_RecipeButton_clicked()
 
 void FAK::on_ShoppingButton_clicked()
 {
-    ShoppingPage shoppingPage;
-    shoppingPage.setModal(true);
-    shoppingPage.exec();
+    QMessageBox::StandardButton reply;
+    reply = QMessageBox::question(this, "Shopping List", "Do you wish to use the last saved shopping list?",
+                                  QMessageBox::Yes | QMessageBox::No);
+    if (reply == QMessageBox::Yes)
+    {
+        ShoppingPageSaved shoppingPageSaved;
+        shoppingPageSaved.setModal(true);
+        shoppingPageSaved.exec();
+
+    }
+    else if (reply == QMessageBox::No)
+    {
+        QMessageBox::StandardButton reply2;
+        reply2 = QMessageBox::question(this, "New List", "If Yes then the last saved Shopping List will be lost",
+                                       QMessageBox::Yes | QMessageBox::No);
+                if (reply2 == QMessageBox::Yes)
+                {
+                    ShoppingPage1 shoppingPage1;
+                    shoppingPage1.setModal(true);
+                    shoppingPage1.exec();
+                }
+                else if (reply2 == QMessageBox::No)
+                {
+                    delete ui;
+                }
+    }
+
 }
 
 void FAK::on_ViewButton_clicked()
