@@ -3,6 +3,8 @@
 #include <QSqlDatabase>
 #include <QtDebug>
 #include <QDialog>
+#include <QMainWindow>
+#include "httprequestworker.h"
 
 namespace Ui {
 class RecipePage;
@@ -20,6 +22,7 @@ private slots:
     void on_HomeButton2_clicked();
 
     void on_SearchButton_clicked();
+    void handle_result(HttpRequestWorker *worker);
 
     void on_MoveOver_clicked();
 
@@ -27,16 +30,5 @@ private:
     Ui::RecipePage *ui;
 };
 
-/*
-class DbManager2
-{
-public:
-    DbManager2(const QString& path);
-
-
-private:
-    QSqlDatabase m_db;
-};
-*/
 
 #endif // RECIPEPAGE_H
