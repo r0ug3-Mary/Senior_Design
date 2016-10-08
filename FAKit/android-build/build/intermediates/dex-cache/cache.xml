@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\r0ug3_h@cK3r\Documents\GitHub\Sr.GUI\FAKit\android-build\libs\QtAndroid-bundled.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="bc7ab6cc93c34e2a39f3baaeca25d2a5250a6154">
+        <dex dex="C:\Users\r0ug3_h@cK3r\Documents\GitHub\Sr.GUI\FAKit\android-build\build\intermediates\pre-dexed\debug\QtAndroid-bundled-159574094f05972afde857db3b5415fffa55d557.jar" />
+    </item>
+
+</items>

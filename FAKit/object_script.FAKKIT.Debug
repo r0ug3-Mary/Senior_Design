@@ -1,0 +1,15 @@
+INPUT(
+./debug\main.o
+./debug\fak.o
+./debug\inventorypage.o
+./debug\recipepage.o
+./debug\shoppingpage.o
+./debug\viewpage.o
+./debug\qrc_insidefridge.o
+./debug\qrc_dbfile.o
+./debug\moc_fak.o
+./debug\moc_inventorypage.o
+./debug\moc_recipepage.o
+./debug\moc_shoppingpage.o
+./debug\moc_viewpage.o
+);

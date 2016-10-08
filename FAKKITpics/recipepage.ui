@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecipePage</class>
+ <widget class="QDialog" name="RecipePage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>456</width>
+    <height>325</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>9</y>
+     <width>438</width>
+     <height>268</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_8">
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="labelcurr">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>838607</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold 12px;
+    color: white;</string>
+        </property>
+        <property name="text">
+         <string>Current Inventory</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Fixed</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>75</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="labellook">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold 12px;
+    color: white;</string>
+        </property>
+        <property name="text">
+         <string>Recipe Parameters</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QListView" name="InventoryList"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="MoveOver">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>25</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold 12px;
+    color: white;</string>
+        </property>
+        <property name="text">
+         <string>=&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextEdit" name="RecipeParams"/>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>290</y>
+     <width>431</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_11">
+    <item>
+     <widget class="QLabel" name="labelwht">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 12px;
+    color: white;</string>
+      </property>
+      <property name="text">
+       <string>When done click the search button :</string>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="SearchButton">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 14px;
+    color: white;</string>
+      </property>
+      <property name="text">
+       <string>Search</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::Fixed</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>38</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item>
+     <widget class="QPushButton" name="HomeButton2">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: bold 14px;
+    color: white;</string>
+      </property>
+      <property name="text">
+       <string>Home</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>layoutWidget</zorder>
+  <zorder>horizontalLayoutWidget_2</zorder>
+  <zorder>SearchButton</zorder>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>HomeButton2</sender>
+   <signal>clicked()</signal>
+   <receiver>RecipePage</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>439</x>
+     <y>293</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>422</x>
+     <y>231</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

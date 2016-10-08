@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewPage</class>
+ <widget class="QDialog" name="ViewPage">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>683</width>
+    <height>439</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Fridge View</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QLabel" name="labelpic">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>651</width>
+     <height>401</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>341</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="HomeButton4">
+   <property name="geometry">
+    <rect>
+     <x>610</x>
+     <y>410</y>
+     <width>75</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: bold 14px;
+    color: white;</string>
+   </property>
+   <property name="text">
+    <string>Home</string>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>340</x>
+     <y>-10</y>
+     <width>351</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="refreshButton">
+   <property name="geometry">
+    <rect>
+     <x>530</x>
+     <y>410</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>HomeButton4</sender>
+   <signal>clicked()</signal>
+   <receiver>ViewPage</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>379</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>300</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
