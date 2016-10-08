@@ -21,15 +21,22 @@ ViewPage::ViewPage(QWidget *parent) :
     //int w = ui->pushButton->width();
     //int h = ui->pushButton->height();
 
-    QPixmap pix1(":/pics/arrow_alt_right.png");
-    QIcon ButtonIcon(pix1);
-    ui->pushButton->setIcon(ButtonIcon);
-    ui->pushButton->setIconSize(QSize(65,65));
+
 
     QImage image("C:/Sr.GUI/FAKKITpics/pics/fridgeSTILLS_18.jpg");
     ui->labelpic->setPixmap(QPixmap::fromImage(image));
 
     ui->pushButton->setStyleSheet("background-color: rgba(255, 255, 255, 0);");
+    QPixmap pix1(":/pics/arrow_alt_right.png");
+    QIcon ButtonIcon(pix1);
+    ui->pushButton->setIcon(ButtonIcon);
+    ui->pushButton->setIconSize(QSize(50,50));
+
+    ui->backButton->setStyleSheet("background-color: rgba(255, 255, 255, 0);");
+    QPixmap pix2(":/pics/arrow_alt_left.png");
+    QIcon ButtonIcon2(pix2);
+    ui->backButton->setIcon(ButtonIcon2);
+    ui->backButton->setIconSize(QSize(50,50));
 
 }
 
@@ -78,4 +85,24 @@ void ViewPage::on_pushButton_clicked()
 
 
 
+}
+
+void ViewPage::on_backButton_clicked()
+{
+    if(i == 0)
+    {
+        QImage image("C:/Sr.GUI/FAKKITpics/pics/thing1.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i = 2;
+    }else if(i == 1)
+    {
+        QImage image("C:/Sr.GUI/FAKKITpics/pics/fridgeSTILLS_18.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i--;
+    }else if(i == 2)
+    {
+        QImage image("C:/Sr.GUI/FAKKITpics/pics/man2.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i--;
+    }
 }

@@ -24,6 +24,7 @@ class Ui_ViewPage
 {
 public:
     QLabel *labelpic;
+    QPushButton *backButton;
     QPushButton *HomeButton4;
     QPushButton *pushButton;
 
@@ -37,6 +38,9 @@ public:
         labelpic->setObjectName(QStringLiteral("labelpic"));
         labelpic->setGeometry(QRect(20, 10, 651, 401));
         labelpic->setScaledContents(true);
+        backButton = new QPushButton(ViewPage);
+        backButton->setObjectName(QStringLiteral("backButton"));
+        backButton->setGeometry(QRect(-10, -10, 341, 421));
         HomeButton4 = new QPushButton(ViewPage);
         HomeButton4->setObjectName(QStringLiteral("HomeButton4"));
         HomeButton4->setGeometry(QRect(0, 410, 75, 25));
@@ -52,7 +56,7 @@ public:
         HomeButton4->setFlat(false);
         pushButton = new QPushButton(ViewPage);
         pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(430, 10, 231, 411));
+        pushButton->setGeometry(QRect(340, -10, 351, 421));
         pushButton->setAutoFillBackground(false);
 
         retranslateUi(ViewPage);
@@ -68,6 +72,7 @@ public:
     {
         ViewPage->setWindowTitle(QApplication::translate("ViewPage", "Fridge View", 0));
         labelpic->setText(QString());
+        backButton->setText(QString());
         HomeButton4->setText(QApplication::translate("ViewPage", "Home", 0));
         pushButton->setText(QString());
     } // retranslateUi

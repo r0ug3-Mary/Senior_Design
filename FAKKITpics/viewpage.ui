@@ -32,6 +32,19 @@
     <bool>true</bool>
    </property>
   </widget>
+  <widget class="QPushButton" name="backButton">
+   <property name="geometry">
+    <rect>
+     <x>-10</x>
+     <y>-10</y>
+     <width>341</width>
+     <height>421</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <widget class="QPushButton" name="HomeButton4">
    <property name="geometry">
     <rect>
@@ -70,10 +83,10 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>10</y>
-     <width>231</width>
-     <height>411</height>
+     <x>340</x>
+     <y>-10</y>
+     <width>351</width>
+     <height>421</height>
     </rect>
    </property>
    <property name="autoFillBackground">
