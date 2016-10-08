@@ -27,6 +27,7 @@ public:
     QPushButton *backButton;
     QPushButton *HomeButton4;
     QPushButton *pushButton;
+    QPushButton *refreshButton;
 
     void setupUi(QDialog *ViewPage)
     {
@@ -43,7 +44,7 @@ public:
         backButton->setGeometry(QRect(-10, -10, 341, 421));
         HomeButton4 = new QPushButton(ViewPage);
         HomeButton4->setObjectName(QStringLiteral("HomeButton4"));
-        HomeButton4->setGeometry(QRect(0, 410, 75, 25));
+        HomeButton4->setGeometry(QRect(610, 410, 75, 25));
         QSizePolicy sizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -58,6 +59,9 @@ public:
         pushButton->setObjectName(QStringLiteral("pushButton"));
         pushButton->setGeometry(QRect(340, -10, 351, 421));
         pushButton->setAutoFillBackground(false);
+        refreshButton = new QPushButton(ViewPage);
+        refreshButton->setObjectName(QStringLiteral("refreshButton"));
+        refreshButton->setGeometry(QRect(530, 410, 75, 23));
 
         retranslateUi(ViewPage);
         QObject::connect(HomeButton4, SIGNAL(clicked()), ViewPage, SLOT(reject()));
@@ -75,6 +79,7 @@ public:
         backButton->setText(QString());
         HomeButton4->setText(QApplication::translate("ViewPage", "Home", 0));
         pushButton->setText(QString());
+        refreshButton->setText(QApplication::translate("ViewPage", "Refresh", 0));
     } // retranslateUi
 
 };

@@ -16,6 +16,8 @@ FAK::FAK(QWidget *parent) :
     //int w = ui->pushButton->width();
     //int h = ui->pushButton->height();
 
+    //testing the scaling of button icons and stuff
+
     QPixmap invpic(":/pics/man2.jpg");
     QIcon InvButtonIcon(invpic);
     ui->InventoryButton->setIcon(InvButtonIcon);

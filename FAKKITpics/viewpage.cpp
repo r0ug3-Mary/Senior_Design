@@ -38,6 +38,7 @@ ViewPage::ViewPage(QWidget *parent) :
     ui->backButton->setIcon(ButtonIcon2);
     ui->backButton->setIconSize(QSize(50,50));
 
+    //semi opaque button test, doesnt work???
 }
 
 ViewPage::~ViewPage()
@@ -80,7 +81,6 @@ void ViewPage::on_pushButton_clicked()
              qDebug() << fileName;
 
         }
-
      */
 
 
