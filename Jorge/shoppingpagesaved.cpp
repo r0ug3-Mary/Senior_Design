@@ -13,6 +13,7 @@
 #include <QStringListModel>
 #include <QFile>
 #include <QTextStream>
+#include <QtCore>
 
 static const QString path = "C:/Users/Piti/Desktop/QTProjects/FAKKIT/fakdb2.db";
 
@@ -21,6 +22,7 @@ ShoppingPageSaved::ShoppingPageSaved(QWidget *parent) :
     ui(new Ui::ShoppingPageSaved)
 {
     ui->setupUi(this);
+    getTextFile();
     DbManager3 db(path);
     QSqlQueryModel *modal2 =new QSqlQueryModel();
     QSqlQuery* query2 = new QSqlQuery();
@@ -94,4 +96,13 @@ DbManager3::DbManager3(const QString &path)
    {
       qDebug() << "Database: connection ok";
    }
+}
+void ShoppingPageSaved::getTextFile()
+{
+    QFile myFile("C:/Users/Piti/Desktop/savelist.txt");
+    myFile.open(QIODevice::ReadOnly);
+    QTextStream textStream(&myFile);
+    QString line = textStream.readAll();
+    myFile.close();
+    ui->textEdit->setPlainText(line);
 }

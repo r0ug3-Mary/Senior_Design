@@ -25,6 +25,7 @@ private slots:
 
 private:
     Ui::ShoppingPageSaved *ui;
+    void getTextFile();
 };
 
 class DbManager3
@@ -33,6 +34,7 @@ public:
     DbManager3(const QString& path);
 private:
     QSqlDatabase m_db;
+
 };
 
 #endif // SHOPPINGPAGESAVED_H
