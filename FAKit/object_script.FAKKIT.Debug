@@ -5,6 +5,7 @@ INPUT(
 ./debug\recipepage.o
 ./debug\shoppingpage.o
 ./debug\viewpage.o
+./debug\reciperesultspage.o
 ./debug\qrc_insidefridge.o
 ./debug\qrc_dbfile.o
 ./debug\moc_fak.o
@@ -12,4 +13,5 @@ INPUT(
 ./debug\moc_recipepage.o
 ./debug\moc_shoppingpage.o
 ./debug\moc_viewpage.o
+./debug\moc_reciperesultspage.o
 );

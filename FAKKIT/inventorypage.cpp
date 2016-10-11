@@ -11,7 +11,12 @@
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
 
+<<<<<<< HEAD
+//QString homeLocation = QStandardPaths::locate(QStandardPaths::HomeLocation, QString(), QStandardPaths::LocateDirectory);
+static const QString path = "C:/Users/r0ug3_h@cK3r/Documents/GitHub/Sr.GUI/FAKKIT/db/fakdb4.db";
+=======
 static const QString path = "C:/Users/Piti/Desktop/QTProjects/FAKKIT/fakdb2.db";
+>>>>>>> origin/Jorge
 
 InventoryPage::InventoryPage(QWidget *parent) :
     QDialog(parent),
