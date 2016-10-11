@@ -17,9 +17,14 @@
 #include <QSqlError>
 #include <QSqlRecord>
 
+<<<<<<< HEAD
 static const QString path = "C:/Users/r0ug3_h@cK3r/Documents/GitHub/Sr.GUI/FAKKIT/db/fakdb4.db";
 =======
 >>>>>>> origin/Jorge
+=======
+
+static const QString path = "C:/Users/r0ug3_h@cK3r/Documents/GitHub/Sr.GUI/FAKKIT/db/fakdb4.db";
+>>>>>>> refs/remotes/origin/master
 
 RecipePage::RecipePage(QWidget *parent) :
     QDialog(parent),
