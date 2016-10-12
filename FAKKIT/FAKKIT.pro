@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core
-QT       += core gui
+QT       += core gui widgets
 QT       += sql
 QT       += network
 
@@ -22,7 +22,9 @@ SOURCES += main.cpp\
     shoppingpage.cpp \
     viewpage.cpp \
     lookuppage.cpp \
-    httprequestworker.cpp
+    httprequestworker.cpp \
+    picturepage.cpp \
+    keyboard/keyboard.cpp
 
 HEADERS  += fak.h \
     inventorypage.h \
@@ -30,14 +32,19 @@ HEADERS  += fak.h \
     shoppingpage.h \
     viewpage.h \
     lookuppage.h \
-    httprequestworker.h
+    httprequestworker.h \
+    picturepage.h \
+    keyboard/keyboard.h \
+    keyboard/ui_keyboard.h
 
 FORMS    += fak.ui \
     inventorypage.ui \
     recipepage.ui \
     shoppingpage.ui \
     viewpage.ui \
-    lookuppage.ui
+    lookuppage.ui \
+    picturepage.ui \
+    keyboard/keyboard.ui
 
 DISTFILES += \
     RecipeLookUpPython.py

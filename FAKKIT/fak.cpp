@@ -5,6 +5,7 @@
 #include "shoppingpage.h"
 #include "viewpage.h"
 #include "QPixmap"
+#include <QIcon>
 
 FAK::FAK(QWidget *parent) :
     QMainWindow(parent),

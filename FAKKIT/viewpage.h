@@ -15,6 +15,11 @@ public:
     explicit ViewPage(QWidget *parent = 0);
     ~ViewPage();
 
+private slots:
+    void on_leftButton_clicked();
+
+    void on_rightButton_clicked();
+
 private:
     Ui::ViewPage *ui;
 };

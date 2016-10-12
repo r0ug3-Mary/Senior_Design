@@ -9,5 +9,11 @@
         <file>pics/man2.jpg</file>
         <file>pics/thing1.jpg</file>
         <file>pics/next.png</file>
+        <file>pics/picturebutton.png</file>
+        <file>pics/inventorybutton.png</file>
+        <file>pics/inventorybuttonlg.png</file>
+        <file>pics/recipebutton.png</file>
+        <file>pics/shoppingbutton.png</file>
+        <file>pics/prev.png</file>
     </qresource>
 </RCC>

@@ -17,7 +17,7 @@
 #include <QListView>
 
 
-static const QString path = "/home/r0ug3/Desktop/GUI/Sr.GUI/FAKKIT/db/fakdb4.db";
+static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
 
 RecipePage::RecipePage(QWidget *parent) :
     QDialog(parent),
@@ -54,12 +54,16 @@ void RecipePage::on_HomeButton2_clicked()
 void RecipePage::on_SearchButton_clicked()
 {
     QString API_KEY = "d6fd8f87abed004a5a382e1f2a9c30ae";
+
     QString url1 = "http://food2fork.com/api/search?";
-    //char url2[] = "http://food2fork.com/api/get?";
     url1.append("key=");
     url1.append("d6fd8f87abed004a5a382e1f2a9c30ae");
     url1.append("&q");
-    //QString url_str=url1 + "key=" + API_KEY + "&q=";
+
+    QString url2 = "http://food2fork.com/api/get?";
+    url2.append("key=");
+    url2.append("d6fd8f87abed004a5a382e1f2a9c30ae");
+    url2.append("&q");
     HttpRequestInput input(url1, "GET");
 
     input.add_var("", "chicken");

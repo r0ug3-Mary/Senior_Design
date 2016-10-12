@@ -2,38 +2,84 @@
 #include "ui_viewpage.h"
 #include "fak.h"
 #include "QPixmap"
+#include "QPushButton"
+#include <QMainWindow>
+#include <QFileDialog>
+#include <QLabel>
+#include <QtDebug>
 
+int i = 0;
 
 ViewPage::ViewPage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ViewPage)
 {
+
     ui->setupUi(this);
     this->setStyleSheet("background-color:#626065;");
 
-    QPixmap pix1(":/pics/fridgeSTILLS_18.jpg");
 
-    // get label dimensions
-    int w = ui->label1->width();
-    int h = ui->label1->height();
+    QImage image(":/pics/fridgeSTILLS_18.jpg");
+    ui->labelpic->setPixmap(QPixmap::fromImage(image));
 
-    // set a scaled pixmap to a w x h window keeping its aspect ratio
-    ui->label1->setPixmap(pix1.scaled(w,h,Qt::KeepAspectRatio));
+    ui->rightButton->setFlat(true);
+    //ui->rightButton->setStylesheet{ QPushButton:flat {   border: none; }};
+    //ui->rightButton->pressed(false);
+    //ui->rightButton->setStyleSheet("background-color: rgba(255, 255, 255, 0);");
 
+    ui->leftButton->setFlat(true);
+    //ui->leftButton->setStyleSheet("background-color: rgba(255, 255, 255, 0);");
 
-    QPixmap pix2(":/pics/thing1.jpg");
-
-    // set a scaled pixmap to a w x h window keeping its aspect ratio
-    ui->label2->setPixmap(pix2.scaled(w,h,Qt::KeepAspectRatio));
-
-
-    QPixmap pix3(":/pics/man2.jpg");
-
-    // set a scaled pixmap to a w x h window keeping its aspect ratio
-    ui->label3->setPixmap(pix3.scaled(w,h,Qt::KeepAspectRatio));
 }
 
 ViewPage::~ViewPage()
 {
     delete ui;
 }
+
+void ViewPage::on_rightButton_clicked()
+{
+
+    if(i == 2)
+    {
+        QImage image(":/pics/fridgeSTILLS_18.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i = 0;
+    }else if(i == 1)
+    {
+        QImage image(":/pics/thing1.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i++;
+    }else if(i == 0)
+    {
+        QImage image(":/pics/man2.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i++;
+    }
+
+
+
+}
+
+
+void ViewPage::on_leftButton_clicked()
+{
+    if(i == 0)
+    {
+        QImage image(":/pics/thing1.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i = 2;
+    }else if(i == 1)
+    {
+        QImage image(":/pics/fridgeSTILLS_18.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i--;
+    }else if(i == 2)
+    {
+        QImage image(":/pics/man2.jpg");
+        ui->labelpic->setPixmap(QPixmap::fromImage(image));
+        i--;
+    }
+}
+
+
