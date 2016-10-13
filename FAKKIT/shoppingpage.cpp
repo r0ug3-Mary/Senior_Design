@@ -1,8 +1,8 @@
 #include "shoppingpage.h"
 #include "ui_shoppingpage.h"
 #include "fak.h"
-#include "/home/r0ug3/Desktop/FAKKIT/keyboard/keyboard.h"
-#include "/home/r0ug3/Desktop/FAKKIT/keyboard/ui_keyboard.h"
+#include "keyboard/keyboard.h"
+#include "keyboard/ui_keyboard.h"
 
 
 ShoppingPage::ShoppingPage(QWidget *parent) :

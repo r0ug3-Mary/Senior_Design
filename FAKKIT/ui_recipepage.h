@@ -20,6 +20,7 @@
 #include <QtWidgets/QListView>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -37,7 +38,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QListView *InventoryList;
     QPushButton *MoveOver;
-    QListView *listView;
+    QTextEdit *RecipeParams;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_11;
     QLabel *labelwht;
@@ -116,11 +117,11 @@ public:
 
         horizontalLayout->addWidget(MoveOver);
 
-        listView = new QListView(layoutWidget);
-        listView->setObjectName(QStringLiteral("listView"));
-        listView->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
+        RecipeParams = new QTextEdit(layoutWidget);
+        RecipeParams->setObjectName(QStringLiteral("RecipeParams"));
+        RecipeParams->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
 
-        horizontalLayout->addWidget(listView);
+        horizontalLayout->addWidget(RecipeParams);
 
 
         verticalLayout->addLayout(horizontalLayout);

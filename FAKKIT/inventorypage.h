@@ -23,14 +23,5 @@ private:
     Ui::InventoryPage *ui;
 };
 
-class DbManager
-{
-public:
-    DbManager(const QString& path);
-
-
-private:
-    QSqlDatabase m_db;
-};
 
 #endif // INVENTORYPAGE_H
