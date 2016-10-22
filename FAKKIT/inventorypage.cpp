@@ -2,13 +2,14 @@
 #include "ui_inventorypage.h"
 #include "fak.h"
 #include "inventorypage.h"
+#include "dbmanager.h"
 #include <QtDebug>
 #include "QtDebug"
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlRecord>
 
-static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
+//static const QString path = "/home/pi/Desktop/FAKKIT/db/fakdb4.db";
 
 InventoryPage::InventoryPage(QWidget *parent) :
     QDialog(parent),
@@ -31,20 +32,6 @@ InventoryPage::InventoryPage(QWidget *parent) :
         }
 }
 
-DbManager::DbManager(const QString &path)
-{
-   m_db = QSqlDatabase::addDatabase("QSQLITE");
-   m_db.setDatabaseName(path);
-
-   if (!m_db.open())
-   {
-      qDebug() << "Error: connection with database fail";
-   }
-   else
-   {
-      qDebug() << "Database: connection ok";
-   }
-}
 
 InventoryPage::~InventoryPage()
 {

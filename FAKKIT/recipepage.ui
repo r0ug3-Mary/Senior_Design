@@ -127,7 +127,7 @@ background-repeat: repeat-false;
        </widget>
       </item>
       <item>
-       <widget class="QListView" name="listView">
+       <widget class="QTextEdit" name="RecipeParams">
         <property name="styleSheet">
          <string notr="true">background-color: rgb(168, 165, 173);</string>
         </property>

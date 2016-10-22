@@ -25,7 +25,6 @@ class Ui_LookupPage
 public:
     QPushButton *HomeButtonL;
     QTextBrowser *ResultText;
-    QPushButton *pushButton;
 
     void setupUi(QDialog *LookupPage)
     {
@@ -34,14 +33,11 @@ public:
         LookupPage->resize(800, 480);
         HomeButtonL = new QPushButton(LookupPage);
         HomeButtonL->setObjectName(QStringLiteral("HomeButtonL"));
-        HomeButtonL->setGeometry(QRect(360, 290, 80, 22));
+        HomeButtonL->setGeometry(QRect(710, 450, 80, 22));
         ResultText = new QTextBrowser(LookupPage);
         ResultText->setObjectName(QStringLiteral("ResultText"));
-        ResultText->setGeometry(QRect(20, 10, 421, 271));
+        ResultText->setGeometry(QRect(20, 10, 761, 421));
         ResultText->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
-        pushButton = new QPushButton(LookupPage);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(40, 290, 80, 22));
 
         retranslateUi(LookupPage);
         QObject::connect(HomeButtonL, SIGNAL(clicked()), LookupPage, SLOT(reject()));
@@ -53,7 +49,6 @@ public:
     {
         LookupPage->setWindowTitle(QApplication::translate("LookupPage", "Dialog", 0));
         HomeButtonL->setText(QApplication::translate("LookupPage", "Home", 0));
-        pushButton->setText(QApplication::translate("LookupPage", "lookup", 0));
     } // retranslateUi
 
 };

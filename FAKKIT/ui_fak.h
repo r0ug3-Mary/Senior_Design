@@ -73,9 +73,7 @@ public:
         InventoryButton->setFont(font1);
         InventoryButton->setFocusPolicy(Qt::StrongFocus);
         InventoryButton->setAutoFillBackground(false);
-        InventoryButton->setStyleSheet(QLatin1String("background-image: url(:/pics/inventorybutton.png);\n"
-"background-position: center;\n"
-"background-repeat: repeat-false;"));
+        InventoryButton->setStyleSheet(QStringLiteral(""));
         InventoryButton->setAutoDefault(true);
 
         gridLayout->addWidget(InventoryButton, 0, 0, 1, 1);
@@ -84,9 +82,7 @@ public:
         RecipeButton->setObjectName(QStringLiteral("RecipeButton"));
         sizePolicy1.setHeightForWidth(RecipeButton->sizePolicy().hasHeightForWidth());
         RecipeButton->setSizePolicy(sizePolicy1);
-        RecipeButton->setStyleSheet(QLatin1String("background-image: url(:/pics/recipebutton.png);\n"
-"background-position: center;\n"
-"background-repeat: repeat-false;"));
+        RecipeButton->setStyleSheet(QStringLiteral(""));
 
         gridLayout->addWidget(RecipeButton, 0, 1, 1, 1);
 
@@ -95,10 +91,7 @@ public:
         sizePolicy1.setHeightForWidth(ShoppingButton->sizePolicy().hasHeightForWidth());
         ShoppingButton->setSizePolicy(sizePolicy1);
         ShoppingButton->setAutoFillBackground(false);
-        ShoppingButton->setStyleSheet(QLatin1String("background-image: url(:/pics/shoppingbutton.png) 0 0 0 0 stretch stretch;\n"
-"background-position: center;\n"
-"background-repeat: repeat-false;\n"
-""));
+        ShoppingButton->setStyleSheet(QStringLiteral(""));
         ShoppingButton->setIconSize(QSize(10, 10));
 
         gridLayout->addWidget(ShoppingButton, 1, 0, 1, 1);
@@ -108,9 +101,7 @@ public:
         sizePolicy.setHeightForWidth(pushButton->sizePolicy().hasHeightForWidth());
         pushButton->setSizePolicy(sizePolicy);
         pushButton->setAutoFillBackground(false);
-        pushButton->setStyleSheet(QLatin1String("background-image: url(:/pics/picturebutton.png);\n"
-"background-position: center;\n"
-"background-repeat: repeat-false;"));
+        pushButton->setStyleSheet(QStringLiteral(""));
         pushButton->setAutoDefault(false);
         pushButton->setFlat(false);
 

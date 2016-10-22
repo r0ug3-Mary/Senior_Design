@@ -21,8 +21,8 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
-#include "/home/r0ug3/Desktop/FAKKIT/keyboard/keyboard.h"
-#include "/home/r0ug3/Desktop/FAKKIT/keyboard/ui_keyboard.h"
+#include "keyboard/keyboard.h"
+#include "keyboard/ui_keyboard.h"
 
 QT_BEGIN_NAMESPACE
 

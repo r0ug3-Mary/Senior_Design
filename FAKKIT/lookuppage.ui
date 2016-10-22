@@ -16,8 +16,8 @@
   <widget class="QPushButton" name="HomeButtonL">
    <property name="geometry">
     <rect>
-     <x>360</x>
-     <y>290</y>
+     <x>710</x>
+     <y>450</y>
      <width>80</width>
      <height>22</height>
     </rect>
@@ -31,25 +31,12 @@
     <rect>
      <x>20</x>
      <y>10</y>
-     <width>421</width>
-     <height>271</height>
+     <width>761</width>
+     <height>421</height>
     </rect>
    </property>
    <property name="styleSheet">
     <string notr="true">background-color: rgb(168, 165, 173);</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>290</y>
-     <width>80</width>
-     <height>22</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>lookup</string>
    </property>
   </widget>
  </widget>

@@ -66,9 +66,9 @@ border-top-color: rgb(0, 0, 255);
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/pics/inventorybutton.png);
-background-position: center;
-background-repeat: repeat-false;</string>
+       <string notr="true">
+
+</string>
       </property>
       <property name="text">
        <string/>
@@ -87,9 +87,7 @@ background-repeat: repeat-false;</string>
        </sizepolicy>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/pics/recipebutton.png);
-background-position: center;
-background-repeat: repeat-false;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -108,10 +106,7 @@ background-repeat: repeat-false;</string>
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/pics/shoppingbutton.png) 0 0 0 0 stretch stretch;
-background-position: center;
-background-repeat: repeat-false;
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -136,9 +131,7 @@ background-repeat: repeat-false;
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-image: url(:/pics/picturebutton.png);
-background-position: center;
-background-repeat: repeat-false;</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>

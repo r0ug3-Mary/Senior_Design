@@ -73,8 +73,8 @@ void LookupPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         LookupPage *_t = static_cast<LookupPage *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->handle_result((*reinterpret_cast< HttpRequestWorker*(*)>(_a[1]))); break;
+        //case 0: _t->on_pushButton_clicked(); break;
+        //case 1: _t->handle_result((*reinterpret_cast< HttpRequestWorker*(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
