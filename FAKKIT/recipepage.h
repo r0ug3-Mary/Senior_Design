@@ -41,12 +41,7 @@ private slots:
 
     void run_keyboard_lineEdit();
 
-    void url_links();
-
-    void onHyperlinkActivated(const QString & link)
-    {
-      QDesktopServices::openUrl( QUrl(link) );
-    }
+    void fuckthislink();
 
 private:
     Ui::RecipePage *ui;

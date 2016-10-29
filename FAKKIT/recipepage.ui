@@ -220,9 +220,6 @@ font: bold 12px; color: white;</string>
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QListWidget" name="urlWidget"/>
-      </item>
      </layout>
     </item>
    </layout>

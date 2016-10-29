@@ -45,7 +45,6 @@ public:
     QPushButton *MoveOver;
     QTextEdit *RecipeParams;
     QListWidget *listWidget;
-    QListWidget *urlWidget;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_11;
     QLabel *labelwht;
@@ -168,11 +167,6 @@ public:
 "font: bold 12px; color: white;"));
 
         horizontalLayout->addWidget(listWidget);
-
-        urlWidget = new QListWidget(layoutWidget);
-        urlWidget->setObjectName(QStringLiteral("urlWidget"));
-
-        horizontalLayout->addWidget(urlWidget);
 
 
         verticalLayout->addLayout(horizontalLayout);

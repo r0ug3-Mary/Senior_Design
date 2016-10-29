@@ -122,10 +122,12 @@ void RecipePage::on_SearchButton_clicked()
     worker->execute(&input);
 }
 
-void RecipePage::url_links()
+QString fuckthisurl;
+void RecipePage::fuckthislink()
 {
-    QString linkss;
-    QDesktopServices::openUrl(QUrl(linkss));
+    fuckthisurl = ui->listWidget->currentItem()->text();
+    QDesktopServices::openUrl(QUrl(fuckthisurl));
+    //qDebug() << ui->listWidget->currentItem()->text();
 }
 
 void RecipePage::handle_result(HttpRequestWorker *worker) {
@@ -146,31 +148,6 @@ void RecipePage::handle_result(HttpRequestWorker *worker) {
             QJsonObject obj = value.toObject();
             ui->listWidget->addItem(obj["title"].toString());
             ui->listWidget->addItem(obj["source_url"].toString());
-
-            QString links;
-            links.at(ui->listWidget->addItem(obj["source_url"].toString());
-
-            //connect(ui->listWidget, SIGNAL(doubleClicked(QListWidgetItem*)), this, SLOT(url_links()));
-
-            //QString link = ui->listWidget->addItem(obj["source_url"].toString());
-            //QDesktopServices::openUrl(QUrl(link));
-
-            //connect(ui->listWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(onHyperlinkActivated(QString)));
-            //QDesktopServices::openUrl(ui->listWidget->addItem(obj["source_url"].toString()));
-
-            //connect(ui->listWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(onHyperlinkActivated(QString)));
-
-            /*QItemSelectionModel *sm = ui->urlWidget->selectionModel();
-            connect(sm, SIGNAL(currentRowChanged(QModelIndex,QModelIndex)), this, SLOT(onHyperlinkActivated(QString));*/
-
-            //QDesktopServices::openUrl(links);
-
-            //QLabel* hyperlinkWidget = new QLabel( QString("<span>%1&nbsp;&nbsp;</span><a href=\"%2\">%2</a>").arg(hyperlinkText), this);
-            //setItemWidget(item, hyperlinkWidget);
-
-            //QListWidgetItem *item = new QListWidgetItem(ui->listWidget);
-            //connect(ui->listWidget, SIGNAL(itemDoubleClicked(QListWidgetItem*)), this, SLOT(onHyperlinkActivated(QString&)));
-            //ui->urlWidget->addItem(item);
         }
 
     }
@@ -178,6 +155,7 @@ void RecipePage::handle_result(HttpRequestWorker *worker) {
         // an error occurred
         msg = "Error: " + worker->error_str;
     }
+connect(ui->listWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(fuckthislink()));
 /*
     QMessageBox recmsg;
     recmsg.information(this, "", msg);
