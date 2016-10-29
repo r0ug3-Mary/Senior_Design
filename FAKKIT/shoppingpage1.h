@@ -2,12 +2,12 @@
 #define SHOPPINGPAGE1_H
 
 #include "keyboard/keyboard.h"
-#include "keyboard/ui_keyboard.h"
 #include "dbmanager.h"
+
 #include <QSqlDatabase>
 #include <QDialog>
 #include <QtDebug>
-
+#include <QWidget>
 
 namespace Ui {
 class ShoppingPage1;

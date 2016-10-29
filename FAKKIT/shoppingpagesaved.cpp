@@ -1,5 +1,8 @@
 #include "shoppingpagesaved.h"
 #include "ui_shoppingpagesaved.h"
+#include "dbmanager.h"
+#include "keyboard/keyboard.h"
+#include "keyboard/ui_keyboard.h"
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QSqlRecord>
@@ -15,8 +18,6 @@
 #include <QTextStream>
 #include <QtCore>
 
-static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
-
 ShoppingPageSaved::ShoppingPageSaved(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::ShoppingPageSaved)
@@ -24,8 +25,12 @@ ShoppingPageSaved::ShoppingPageSaved(QWidget *parent) :
     ui->setupUi(this);
     this->setStyleSheet("background-color:#626065;");
 
+    //keyboard upon lineedit
+    lineEditkeyboard = new Keyboard();
+    connect(ui->lineEdit ,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
+
     getTextFile();
-    DbManager3 db(path);
+    DbManager db(path);
     QSqlQueryModel *modal2 =new QSqlQueryModel();
     QSqlQuery* query2 = new QSqlQuery();
     QSqlQueryModel *modal3 =new QSqlQueryModel();
@@ -53,7 +58,7 @@ void ShoppingPageSaved::on_pushButton_clicked()
 void ShoppingPageSaved::on_pushButton_2_clicked()
 {
     //SAVING
-    QString filename = "~/Desktop/savelist.txt";
+    QString filename = "/home/r0ug3/Desktop/savelist.txt";
     QFile file(filename);
     if (file.open(QIODevice::ReadWrite))
     {
@@ -85,26 +90,25 @@ void ShoppingPageSaved::on_swapButton2_clicked()
     modal3->setQuery(*query3);
     ui->listView_2->setModel(modal3);
 }
-DbManager3::DbManager3(const QString &path)
-{
-   m_db = QSqlDatabase::addDatabase("QSQLITE");
-   m_db.setDatabaseName(path);
 
-   if (!m_db.open())
-   {
-      qDebug() << "Error: connection with database fail";
-   }
-   else
-   {
-      qDebug() << "Database: connection ok";
-   }
-}
 void ShoppingPageSaved::getTextFile()
 {
-    QFile myFile("~/Desktop/savelist.txt");
+    QFile myFile("/home/r0ug3/Desktop/savelist.txt");
     myFile.open(QIODevice::ReadOnly);
     QTextStream textStream(&myFile);
     QString line = textStream.readAll();
     myFile.close();
     ui->textEdit->setPlainText(line);
+}
+
+void ShoppingPageSaved::run_keyboard_lineEdit()
+{
+    QLineEdit *line = (QLineEdit *)sender();
+    lineEditkeyboard->setLineEdit(line);
+    lineEditkeyboard->show();
+}
+
+void ShoppingPageSaved::on_pushButton_3_clicked()
+{
+    close();
 }

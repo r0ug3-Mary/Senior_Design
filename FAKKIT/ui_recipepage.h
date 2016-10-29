@@ -18,6 +18,7 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QListView>
+#include <QtWidgets/QListWidget>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTextEdit>
@@ -32,13 +33,19 @@ public:
     QWidget *layoutWidget;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_8;
+    QSpacerItem *horizontalSpacer_4;
     QLabel *labelcurr;
     QSpacerItem *horizontalSpacer;
     QLabel *labellook;
+    QSpacerItem *horizontalSpacer_3;
+    QLabel *label;
+    QSpacerItem *horizontalSpacer_5;
     QHBoxLayout *horizontalLayout;
     QListView *InventoryList;
     QPushButton *MoveOver;
     QTextEdit *RecipeParams;
+    QListWidget *listWidget;
+    QListWidget *urlWidget;
     QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_11;
     QLabel *labelwht;
@@ -61,6 +68,10 @@ public:
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(-1, -1, 0, -1);
+        horizontalSpacer_4 = new QSpacerItem(30, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_4);
+
         labelcurr = new QLabel(layoutWidget);
         labelcurr->setObjectName(QStringLiteral("labelcurr"));
         QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
@@ -74,7 +85,7 @@ public:
 
         horizontalLayout_8->addWidget(labelcurr);
 
-        horizontalSpacer = new QSpacerItem(200, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
+        horizontalSpacer = new QSpacerItem(50, 20, QSizePolicy::Fixed, QSizePolicy::Minimum);
 
         horizontalLayout_8->addItem(horizontalSpacer);
 
@@ -90,6 +101,26 @@ public:
 
         horizontalLayout_8->addWidget(labellook);
 
+        horizontalSpacer_3 = new QSpacerItem(20, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_3);
+
+        label = new QLabel(layoutWidget);
+        label->setObjectName(QStringLiteral("label"));
+        QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy2);
+        label->setStyleSheet(QLatin1String("font: bold 12px;\n"
+"    color: white;"));
+
+        horizontalLayout_8->addWidget(label);
+
+        horizontalSpacer_5 = new QSpacerItem(30, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
+
+        horizontalLayout_8->addItem(horizontalSpacer_5);
+
 
         verticalLayout->addLayout(horizontalLayout_8);
 
@@ -97,17 +128,18 @@ public:
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
         InventoryList = new QListView(layoutWidget);
         InventoryList->setObjectName(QStringLiteral("InventoryList"));
-        InventoryList->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
+        InventoryList->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
 
         horizontalLayout->addWidget(InventoryList);
 
         MoveOver = new QPushButton(layoutWidget);
         MoveOver->setObjectName(QStringLiteral("MoveOver"));
-        QSizePolicy sizePolicy2(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(MoveOver->sizePolicy().hasHeightForWidth());
-        MoveOver->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(MoveOver->sizePolicy().hasHeightForWidth());
+        MoveOver->setSizePolicy(sizePolicy3);
         MoveOver->setMaximumSize(QSize(25, 16777215));
         MoveOver->setAutoFillBackground(false);
         MoveOver->setStyleSheet(QLatin1String("background-image: url(:/pics/next.png);\n"
@@ -119,9 +151,28 @@ public:
 
         RecipeParams = new QTextEdit(layoutWidget);
         RecipeParams->setObjectName(QStringLiteral("RecipeParams"));
-        RecipeParams->setStyleSheet(QStringLiteral("background-color: rgb(168, 165, 173);"));
+        QSizePolicy sizePolicy4(QSizePolicy::Maximum, QSizePolicy::Expanding);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(RecipeParams->sizePolicy().hasHeightForWidth());
+        RecipeParams->setSizePolicy(sizePolicy4);
+        RecipeParams->setMaximumSize(QSize(150, 16777215));
+        RecipeParams->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
 
         horizontalLayout->addWidget(RecipeParams);
+
+        listWidget = new QListWidget(layoutWidget);
+        listWidget->setObjectName(QStringLiteral("listWidget"));
+        listWidget->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
+
+        horizontalLayout->addWidget(listWidget);
+
+        urlWidget = new QListWidget(layoutWidget);
+        urlWidget->setObjectName(QStringLiteral("urlWidget"));
+
+        horizontalLayout->addWidget(urlWidget);
 
 
         verticalLayout->addLayout(horizontalLayout);
@@ -134,11 +185,11 @@ public:
         horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
         labelwht = new QLabel(horizontalLayoutWidget_2);
         labelwht->setObjectName(QStringLiteral("labelwht"));
-        QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(labelwht->sizePolicy().hasHeightForWidth());
-        labelwht->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(labelwht->sizePolicy().hasHeightForWidth());
+        labelwht->setSizePolicy(sizePolicy5);
         labelwht->setStyleSheet(QLatin1String("font: bold 12px;\n"
 "    color: white;"));
         labelwht->setWordWrap(true);
@@ -147,8 +198,8 @@ public:
 
         SearchButton = new QPushButton(horizontalLayoutWidget_2);
         SearchButton->setObjectName(QStringLiteral("SearchButton"));
-        sizePolicy2.setHeightForWidth(SearchButton->sizePolicy().hasHeightForWidth());
-        SearchButton->setSizePolicy(sizePolicy2);
+        sizePolicy3.setHeightForWidth(SearchButton->sizePolicy().hasHeightForWidth());
+        SearchButton->setSizePolicy(sizePolicy3);
         SearchButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
 "    color: white;"));
 
@@ -160,11 +211,11 @@ public:
 
         HomeButton2 = new QPushButton(horizontalLayoutWidget_2);
         HomeButton2->setObjectName(QStringLiteral("HomeButton2"));
-        QSizePolicy sizePolicy4(QSizePolicy::Maximum, QSizePolicy::Fixed);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(HomeButton2->sizePolicy().hasHeightForWidth());
-        HomeButton2->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy6(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(HomeButton2->sizePolicy().hasHeightForWidth());
+        HomeButton2->setSizePolicy(sizePolicy6);
         HomeButton2->setLayoutDirection(Qt::RightToLeft);
         HomeButton2->setStyleSheet(QLatin1String("font: bold 14px;\n"
 "    color: white;"));
@@ -183,6 +234,7 @@ public:
         RecipePage->setWindowTitle(QApplication::translate("RecipePage", "Dialog", 0));
         labelcurr->setText(QApplication::translate("RecipePage", "Current Inventory", 0));
         labellook->setText(QApplication::translate("RecipePage", "Recipe Parameters", 0));
+        label->setText(QApplication::translate("RecipePage", "Recipies Available", 0));
         MoveOver->setText(QString());
         labelwht->setText(QApplication::translate("RecipePage", "When done click the search button :", 0));
         SearchButton->setText(QApplication::translate("RecipePage", "Search", 0));

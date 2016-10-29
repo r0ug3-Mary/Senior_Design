@@ -20,18 +20,31 @@
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
         <widget class="QLabel" name="label">
+         <property name="styleSheet">
+          <string notr="true">font: bold 14px;
+    color: white;</string>
+         </property>
          <property name="text">
           <string>SHOPPING LIST</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QTextEdit" name="textEdit"/>
+        <widget class="QTextEdit" name="textEdit">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
      <item>
       <widget class="QPushButton" name="swapButton">
+       <property name="styleSheet">
+        <string notr="true">font: bold 14px;
+    color: white;</string>
+       </property>
        <property name="text">
         <string>&lt;-&gt;</string>
        </property>
@@ -41,13 +54,22 @@
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <widget class="QLabel" name="label_2">
+         <property name="styleSheet">
+          <string notr="true">font: bold 14px;
+    color: white;</string>
+         </property>
          <property name="text">
           <string>LOW ON:</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QListView" name="listView_2"/>
+        <widget class="QListView" name="listView_2">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </item>
@@ -56,10 +78,19 @@
    <item row="1" column="0">
     <layout class="QHBoxLayout" name="horizontalLayout_2">
      <item>
-      <widget class="QLineEdit" name="lineEdit"/>
+      <widget class="QLineEdit" name="lineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">font: bold 14px;
+    color: white;</string>
+       </property>
        <property name="text">
         <string>Add</string>
        </property>
@@ -67,6 +98,10 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">font: bold 14px;
+    color: white;</string>
+       </property>
        <property name="text">
         <string>Save</string>
        </property>
@@ -74,6 +109,10 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">font: bold 14px;
+    color: white;</string>
+       </property>
        <property name="text">
         <string>Home</string>
        </property>

@@ -32,6 +32,22 @@
        <number>0</number>
       </property>
       <item>
+       <spacer name="horizontalSpacer_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
        <widget class="QLabel" name="labelcurr">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Minimum">
@@ -64,7 +80,7 @@
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>200</width>
+          <width>50</width>
           <height>20</height>
          </size>
         </property>
@@ -87,6 +103,55 @@
         </property>
        </widget>
       </item>
+      <item>
+       <spacer name="horizontalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: bold 12px;
+    color: white;</string>
+        </property>
+        <property name="text">
+         <string>Recipies Available</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer_5">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Maximum</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>30</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
      </layout>
     </item>
     <item>
@@ -94,7 +159,8 @@
       <item>
        <widget class="QListView" name="InventoryList">
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(168, 165, 173);</string>
+         <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
         </property>
        </widget>
       </item>
@@ -128,10 +194,34 @@ background-repeat: repeat-false;
       </item>
       <item>
        <widget class="QTextEdit" name="RecipeParams">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
         <property name="styleSheet">
-         <string notr="true">background-color: rgb(168, 165, 173);</string>
+         <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
         </property>
        </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="listWidget">
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(168, 165, 173);
+font: bold 12px; color: white;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QListWidget" name="urlWidget"/>
       </item>
      </layout>
     </item>

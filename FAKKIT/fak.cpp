@@ -2,8 +2,8 @@
 #include "ui_fak.h"
 #include "inventorypage.h"
 #include "recipepage.h"
-#include "shoppingpage.h"
 #include "viewpage.h"
+#include "recentpage.h"
 #include "QPixmap"
 #include <QIcon>
 #include "QPixmap"
@@ -41,39 +41,35 @@ FAK::~FAK()
 void FAK::on_InventoryButton_clicked()
 {
     InventoryPage inventoryPage;
-    inventoryPage.setModal(true);
+    //inventoryPage.setModal(true);
     inventoryPage.exec();
 }
 
 void FAK::on_RecipeButton_clicked()
 {
-    RecipePage recipePage;
-    recipePage.setModal(true);
-    recipePage.exec();
+    RecipePage *recipePage=new RecipePage();
+    recipePage->show();
 }
 
 void FAK::on_ShoppingButton_clicked()
 {
     QMessageBox::StandardButton reply;
-    reply = QMessageBox::question(this, "Shopping List", "Do you wish to use the last saved shopping list?",
+    reply = QMessageBox::question(this, "Shopping List", "<font color = white >Do you wish to use the last saved shopping list?</font>",
                                   QMessageBox::Yes | QMessageBox::No);
     if (reply == QMessageBox::Yes)
     {
-        ShoppingPageSaved shoppingPageSaved;
-        shoppingPageSaved.setModal(true);
-        shoppingPageSaved.exec();
-
+        ShoppingPageSaved *shoppingPageSaved=new ShoppingPageSaved();
+        shoppingPageSaved->show();
     }
     else if (reply == QMessageBox::No)
     {
         QMessageBox::StandardButton reply2;
-        reply2 = QMessageBox::question(this, "New List", "If Yes is clicked, then the last saved Shopping List will be lost",
+        reply2 = QMessageBox::question(this, "New List", "<font color = white >If Yes is clicked, then the last saved Shopping List will be lost</font>",
                                        QMessageBox::Yes | QMessageBox::No);
                 if (reply2 == QMessageBox::Yes)
                 {
-                    ShoppingPage1 shoppingPage1;
-                    shoppingPage1.setModal(true);
-                    shoppingPage1.exec();
+                    ShoppingPage1 *shoppingPage1=new ShoppingPage1();
+                    shoppingPage1->show();
                 }
                 else if (reply2 == QMessageBox::No)
                 {
@@ -86,6 +82,6 @@ void FAK::on_ShoppingButton_clicked()
 void FAK::on_pushButton_clicked()
 {
     ViewPage viewPage;
-    viewPage.setModal(true);
+    //viewPage.setModal(true);
     viewPage.exec();
 }

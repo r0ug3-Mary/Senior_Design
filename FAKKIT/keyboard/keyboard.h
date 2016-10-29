@@ -3,8 +3,6 @@
 
 #include <QWidget>
 #include <QtGui>
-#include <QLineEdit>
-#include <QPushButton>
 #include "keyboard/keyboard.h"
 #include "keyboard/ui_keyboard.h"
 
@@ -34,6 +32,7 @@ private slots:
     void on_lineEdit_returnPressed();
 
     void on_backButton_clicked();
+
 
 private:
     Ui::Keyboard *ui;

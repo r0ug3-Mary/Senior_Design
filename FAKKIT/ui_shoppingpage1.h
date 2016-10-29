@@ -57,11 +57,15 @@ public:
         verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
         label = new QLabel(ShoppingPage1);
         label->setObjectName(QStringLiteral("label"));
+        label->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         verticalLayout_2->addWidget(label);
 
         textEdit = new QTextEdit(ShoppingPage1);
         textEdit->setObjectName(QStringLiteral("textEdit"));
+        textEdit->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
 
         verticalLayout_2->addWidget(textEdit);
 
@@ -70,6 +74,8 @@ public:
 
         swapButton = new QPushButton(ShoppingPage1);
         swapButton->setObjectName(QStringLiteral("swapButton"));
+        swapButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         horizontalLayout->addWidget(swapButton);
 
@@ -77,11 +83,15 @@ public:
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         label_2 = new QLabel(ShoppingPage1);
         label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         verticalLayout->addWidget(label_2);
 
         listView_2 = new QListView(ShoppingPage1);
         listView_2->setObjectName(QStringLiteral("listView_2"));
+        listView_2->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
 
         verticalLayout->addWidget(listView_2);
 
@@ -95,21 +105,29 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         lineEdit = new QLineEdit(ShoppingPage1);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+"font: bold 12px; color: white;"));
 
         horizontalLayout_2->addWidget(lineEdit);
 
         pushButton_3 = new QPushButton(ShoppingPage1);
         pushButton_3->setObjectName(QStringLiteral("pushButton_3"));
+        pushButton_3->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         horizontalLayout_2->addWidget(pushButton_3);
 
         pushButton_2 = new QPushButton(ShoppingPage1);
         pushButton_2->setObjectName(QStringLiteral("pushButton_2"));
+        pushButton_2->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         horizontalLayout_2->addWidget(pushButton_2);
 
         pushButton = new QPushButton(ShoppingPage1);
         pushButton->setObjectName(QStringLiteral("pushButton"));
+        pushButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
+"    color: white;"));
 
         horizontalLayout_2->addWidget(pushButton);
 
