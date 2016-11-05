@@ -51,27 +51,4 @@ private:
 
 
 
-
-
-
-static bool createConnection()
-{
-    QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName(":memory:");  // memory only db
-
-    QSqlQuery query;
-    query.exec("create table person (ID int primary key, "
-               "Name varchar(20), Text varchar(80))");
-    query.exec("insert into person values(1, 'Danny', 'Some Text on Danny')");
-    query.exec("insert into person values(2, 'Christine', 'Some Text on Christy')");
-    query.exec("insert into person values(3, 'Lars', 'Some Text on Lars')");
-    query.exec("insert into person values(4, 'Robert', 'Some Text on Robert')");
-    query.exec("insert into person values(5, 'Maria', 'Some Text on Mary')");
-
-    return true;
-}
-
-
-
-
 #endif // INVENTORYPAGE_H
