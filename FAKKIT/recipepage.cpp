@@ -34,29 +34,26 @@
 #include <QVariantMap>
 #include <QJsonArray>
 
-//QString recId();
 
 RecipePage::RecipePage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::RecipePage)
 {
     ui->setupUi(this);
-    //lineEditkeyboard = new Keyboard();
-    //connect(ui->lineEdit,SIGNAL(selectionChanged()),this,SLOT(run_keyboard_lineEdit()));
 
     this->setStyleSheet("background-color:#626065;");
 
     DbManager db(path);
     QSqlQueryModel *modal2 =new QSqlQueryModel();
-    QSqlQuery* query = new QSqlQuery();
+    //QSqlQuery* query = new QSqlQuery();
     QSqlQuery* query2 = new QSqlQuery();
-    query->exec("SELECT * FROM codes");
-    int idAmount = query->record().indexOf("");
-    int idName = query->record().indexOf("name");
-    query2->exec("SELECT name FROM codes");
+    //query->exec("SELECT * FROM Main");
+    //int idAmount = query->record().indexOf("");
+    //int idName = query->record().indexOf("Name");
+    query2->exec("SELECT Name FROM Main");
     modal2->setQuery(*query2);
     ui->InventoryList->setModel(modal2);
-    while(query->next())
+    /*while(query->next())
         {
             QString name = query->value(idName).toString();
             QString amount = query->value(idAmount).toString();
@@ -64,7 +61,7 @@ RecipePage::RecipePage(QWidget *parent) :
                 {
                     ui->RecipeParams->append(name);
                 }
-        }
+        }*/
 
 }
 
@@ -88,15 +85,29 @@ void RecipePage::on_HomeButton2_clicked()
 void RecipePage::on_MoveOver_clicked()
 {
     //SWAPPING
-    QSqlQueryModel *modal2 =new QSqlQueryModel();
-    QSqlQuery* query2 = new QSqlQuery();
+    //QSqlQueryModel *modal2 =new QSqlQueryModel();
+    //QSqlQuery* query2 = new QSqlQuery();
     QModelIndex index = ui->InventoryList->currentIndex();
     QString itemText = index.data(Qt::DisplayRole).toString();
-    qDebug() << itemText;
-    ui->RecipeParams->append(itemText);
-    query2->exec("SELECT name FROM codes");
-    modal2->setQuery(*query2);
-    ui->InventoryList->setModel(modal2);
+    //qDebug() << itemText;
+    //ui->RecipeParams->append(itemText);
+
+    QSqlQuery* query1 = new QSqlQuery();
+    query1->prepare("SELECT Category FROM Main WHERE Name = (:idname)");
+    query1->bindValue(":idname", itemText);
+    query1->exec();
+    if (query1->next()) {
+        QString stock = query1->value(0).toString();
+            ui->RecipeParams->append(stock);
+                qDebug() << stock;
+        // You could store the information you obtain here in a vector or something
+    }
+    //ui->RecipeParams->append(stock);
+    //qDebug() << stock;
+
+    //query2->exec("SELECT Name FROM Main");
+    //modal2->setQuery(*query2);
+    //ui->InventoryList->setModel(modal2);
 }
 
 void RecipePage::on_SearchButton_clicked()
@@ -104,6 +115,9 @@ void RecipePage::on_SearchButton_clicked()
     //ui->RecipeParams->clear();
     //ui->listWidget->clear();
     QString params = ui->RecipeParams->toPlainText();
+    params.replace("\n",",");
+    params.replace(" ","%20");
+    qDebug() << params;
 
     //call search api
     QString url1 = "http://food2fork.com/api/search?";

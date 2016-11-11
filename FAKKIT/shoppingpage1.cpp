@@ -28,9 +28,9 @@ ShoppingPage1::ShoppingPage1(QWidget *parent) :
     QSqlQuery* query = new QSqlQuery();
     QSqlQuery* query2 = new QSqlQuery();
     query->exec("SELECT * FROM Main");
-    int idAmount = query->record().indexOf("amount");
-    int idName = query->record().indexOf("name");
-    query2->exec("SELECT name FROM Main WHERE amount == 'Low'");
+    int idAmount = query->record().indexOf("Amount");
+    int idName = query->record().indexOf("Name");
+    query2->exec("SELECT Name FROM Main WHERE Amount == 'Low'");
     modal2->setQuery(*query2);
     ui->listView_2->show(); //might need modal2 inside show
     while(query->next())
@@ -65,7 +65,7 @@ void ShoppingPage1::on_swapButton_clicked()
     QString itemText = index.data(Qt::DisplayRole).toString();
     qDebug() << itemText;
     ui->textEdit->append(itemText);
-    query2->exec("SELECT name FROM Main WHERE amount == 'Low'");
+    query2->exec("SELECT Name FROM Main WHERE Amount == 'Low'");
     modal2->setQuery(*query2);
     ui->listView_2->show();     //might need modal2 inside show
 

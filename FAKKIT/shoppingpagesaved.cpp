@@ -35,10 +35,10 @@ ShoppingPageSaved::ShoppingPageSaved(QWidget *parent) :
     QSqlQuery* query2 = new QSqlQuery();
     QSqlQueryModel *modal3 =new QSqlQueryModel();
     QSqlQuery* query3 = new QSqlQuery();
-    query2->exec("SELECT name FROM Main WHERE amount == 'Empty'");
+    query2->exec("SELECT Name FROM Main WHERE Amount == 'Empty'");
     modal2->setQuery(*query2);
     ui->listView->setModel(modal2);
-    query3->exec("SELECT name FROM Main WHERE amount == 'Low'");
+    query3->exec("SELECT Name FROM Main WHERE Amount == 'Low'");
     modal3->setQuery(*query3);
     ui->listView_2->setModel(modal3);
 }
@@ -83,10 +83,10 @@ void ShoppingPageSaved::on_swapButton2_clicked()
     qDebug() << itemText2;
     ui->textEdit->append(itemText);
     ui->textEdit->append(itemText2);
-    query2->exec("SELECT name FROM Main WHERE amount == 'Empty'");
+    query2->exec("SELECT Name FROM Main WHERE Amount == 'Empty'");
     modal2->setQuery(*query2);
     ui->listView->setModel(modal2);
-    query3->exec("SELECT name FROM Main WHERE amount == 'Low'");
+    query3->exec("SELECT Name FROM Main WHERE Amount == 'Low'");
     modal3->setQuery(*query3);
     ui->listView_2->setModel(modal3);
 }
