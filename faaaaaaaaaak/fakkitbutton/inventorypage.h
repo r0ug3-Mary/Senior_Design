@@ -1,0 +1,54 @@
+#ifndef INVENTORYPAGE_H
+#define INVENTORYPAGE_H
+#include <QSqlDatabase>
+#include <QDialog>
+#include <QtDebug>
+#include <QSqlQuery>
+#include <QSqlQueryModel>
+
+#include <QMessageBox>
+#include <QSqlError>
+
+
+namespace Ui {
+class InventoryPage;
+}
+
+class InventoryPage : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit InventoryPage(QWidget *parent = 0);
+    //QSqlQueryModel *modal = new QSqlQueryModel();
+    //QSqlQuery* query = new QSqlQuery();
+    ~InventoryPage();
+
+private slots:
+    void High();
+    void Low();
+    void Empty();
+    void on_HomeButton_clicked();
+
+    void on_LowEmpButton_clicked();
+
+    void on_RemoveButton_clicked();
+
+    void on_AllButton_clicked();
+
+private:
+    Ui::InventoryPage *ui;
+};
+
+class DbManager
+{
+public:
+    DbManager(const QString& path);
+
+private:
+    QSqlDatabase m_db;
+};
+
+
+
+#endif // INVENTORYPAGE_H

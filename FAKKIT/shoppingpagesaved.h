@@ -1,5 +1,9 @@
 #ifndef SHOPPINGPAGESAVED_H
 #define SHOPPINGPAGESAVED_H
+
+#include "keyboard/keyboard.h"
+#include "keyboard/ui_keyboard.h"
+#include "dbmanager.h"
 #include <QSqlDatabase>
 #include <QDialog>
 #include <QtDebug>
@@ -23,18 +27,15 @@ private slots:
 
     void on_swapButton2_clicked();
 
+    void run_keyboard_lineEdit();
+
+    void on_pushButton_3_clicked();
+
 private:
     Ui::ShoppingPageSaved *ui;
+    Keyboard *lineEditkeyboard;
     void getTextFile();
 };
 
-class DbManager3
-{
-public:
-    DbManager3(const QString& path);
-private:
-    QSqlDatabase m_db;
-
-};
 
 #endif // SHOPPINGPAGESAVED_H

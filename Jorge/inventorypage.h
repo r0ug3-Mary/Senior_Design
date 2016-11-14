@@ -4,6 +4,9 @@
 #include <QDialog>
 #include <QtDebug>
 
+
+
+
 namespace Ui {
 class InventoryPage;
 }
@@ -17,6 +20,9 @@ public:
     ~InventoryPage();
 
 private slots:
+    void High();
+    void Low();
+    void Empty();
     void on_HomeButton_clicked();
 
     void on_LowEmpButton_clicked();

@@ -4,13 +4,14 @@
 #include <QDialog>
 #include <QtDebug>
 
-static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
-
+static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/permanentdb.db";
+static const QString path2 = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
 
 class DbManager
 {
 public:
-    DbManager(const QString& path)
+    //QSqlDatabase m_db;
+    DbManager(const QString &path)
 {
    m_db = QSqlDatabase::addDatabase("QSQLITE");
    m_db.setDatabaseName(path);
@@ -27,6 +28,28 @@ public:
 
 private:
     QSqlDatabase m_db;
+};
+
+class DbManager2
+{
+public:
+    DbManager2(const QString &path2)
+{
+   m_db2 = QSqlDatabase::addDatabase("QSQLITE");
+   m_db2.setDatabaseName(path2);
+
+   if (!m_db2.open())
+   {
+      qDebug() << "Error: connection with database fail";
+   }
+   else
+   {
+      qDebug() << "Database: connection ok";
+   }
+}
+
+private:
+    QSqlDatabase m_db2;
 };
 
 #endif // DBMANAGER_H

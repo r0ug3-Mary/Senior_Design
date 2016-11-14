@@ -1,6 +1,6 @@
 #ifndef FAK_H
 #define FAK_H
-
+#include "shoppingpage1.h"
 #include <QMainWindow>
 
 namespace Ui {
@@ -26,6 +26,7 @@ private slots:
 
 private:
     Ui::FAK *ui;
+    ShoppingPage1 *shoppingPage1;
 };
 
 #endif // FAK_H

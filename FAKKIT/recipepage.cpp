@@ -13,12 +13,21 @@
 #include <QSqlError>
 #include <QSqlRecord>
 #include <QProcess>
+#include <QNetworkAccessManager>
+#include <QNetworkRequest>
 #include <QNetworkReply>
+#include <QUrl>
+#include <QUrlQuery>
+#include <QLabel>
+#include <QDesktopServices>
 #include <QMessageBox>
 #include <QListView>
+#include <QListWidgetItem>
 #include <QSqlQueryModel>
 #include <QStringListModel>
+#include <QStringList>
 #include <QFile>
+#include <QList>
 #include <QJsonValue>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -31,19 +40,20 @@ RecipePage::RecipePage(QWidget *parent) :
     ui(new Ui::RecipePage)
 {
     ui->setupUi(this);
+
     this->setStyleSheet("background-color:#626065;");
 
     DbManager db(path);
     QSqlQueryModel *modal2 =new QSqlQueryModel();
-    QSqlQuery* query = new QSqlQuery();
+    //QSqlQuery* query = new QSqlQuery();
     QSqlQuery* query2 = new QSqlQuery();
-    query->exec("SELECT * FROM codes");
-    int idAmount = query->record().indexOf("");
-    int idName = query->record().indexOf("name");
-    query2->exec("SELECT name FROM codes");
+    //query->exec("SELECT * FROM Main");
+    //int idAmount = query->record().indexOf("");
+    //int idName = query->record().indexOf("Name");
+    query2->exec("SELECT Name FROM Main");
     modal2->setQuery(*query2);
     ui->InventoryList->setModel(modal2);
-    while(query->next())
+    /*while(query->next())
         {
             QString name = query->value(idName).toString();
             QString amount = query->value(idAmount).toString();
@@ -51,7 +61,7 @@ RecipePage::RecipePage(QWidget *parent) :
                 {
                     ui->RecipeParams->append(name);
                 }
-        }
+        }*/
 
 }
 
@@ -60,15 +70,54 @@ RecipePage::~RecipePage()
     delete ui;
 }
 
+void RecipePage::run_keyboard_lineEdit()
+{
+    QLineEdit *line = (QLineEdit *)sender();
+    lineEditkeyboard->setLineEdit(line);
+    lineEditkeyboard->show();
+}
+
 void RecipePage::on_HomeButton2_clicked()
 {
+    close();
+}
 
+void RecipePage::on_MoveOver_clicked()
+{
+    //SWAPPING
+    //QSqlQueryModel *modal2 =new QSqlQueryModel();
+    //QSqlQuery* query2 = new QSqlQuery();
+    QModelIndex index = ui->InventoryList->currentIndex();
+    QString itemText = index.data(Qt::DisplayRole).toString();
+    //qDebug() << itemText;
+    //ui->RecipeParams->append(itemText);
+
+    QSqlQuery* query1 = new QSqlQuery();
+    query1->prepare("SELECT Category FROM Main WHERE Name = (:idname)");
+    query1->bindValue(":idname", itemText);
+    query1->exec();
+    if (query1->next()) {
+        QString stock = query1->value(0).toString();
+            ui->RecipeParams->append(stock);
+                qDebug() << stock;
+        // You could store the information you obtain here in a vector or something
+    }
+    //ui->RecipeParams->append(stock);
+    //qDebug() << stock;
+
+    //query2->exec("SELECT Name FROM Main");
+    //modal2->setQuery(*query2);
+    //ui->InventoryList->setModel(modal2);
 }
 
 void RecipePage::on_SearchButton_clicked()
 {
-
+    //ui->RecipeParams->clear();
+    //ui->listWidget->clear();
     QString params = ui->RecipeParams->toPlainText();
+    params.replace("\n",",");
+    params.replace(" ","%20");
+    qDebug() << params;
 
     //call search api
     QString url1 = "http://food2fork.com/api/search?";
@@ -76,13 +125,6 @@ void RecipePage::on_SearchButton_clicked()
     url1.append("d6fd8f87abed004a5a382e1f2a9c30ae");
     url1.append("&q=");
     url1.append(params);
-
-    //call get api
-    QString url2 = "http://food2fork.com/api/get?";
-    url2.append("key=");
-    url2.append("d6fd8f87abed004a5a382e1f2a9c30ae");
-    url2.append("&rId=");
-    url2.append(params);
 
     //request from api
     HttpRequestInput input(url1, "GET");
@@ -92,21 +134,14 @@ void RecipePage::on_SearchButton_clicked()
     HttpRequestWorker *worker = new HttpRequestWorker(this);
     connect(worker, SIGNAL(on_execution_finished(HttpRequestWorker*)), this, SLOT(handle_result(HttpRequestWorker*)));
     worker->execute(&input);
-
 }
 
-void RecipePage::on_MoveOver_clicked()
+QString fuckthisurl;
+void RecipePage::fuckthislink()
 {
-    //SWAPPING
-    QSqlQueryModel *modal2 =new QSqlQueryModel();
-    QSqlQuery* query2 = new QSqlQuery();
-    QModelIndex index = ui->InventoryList->currentIndex();
-    QString itemText = index.data(Qt::DisplayRole).toString();
-    qDebug() << itemText;
-    ui->RecipeParams->append(itemText);
-    query2->exec("SELECT name FROM codes");
-    modal2->setQuery(*query2);
-    ui->InventoryList->setModel(modal2);
+    fuckthisurl = ui->listWidget->currentItem()->text();
+    QDesktopServices::openUrl(QUrl(fuckthisurl));
+    //qDebug() << ui->listWidget->currentItem()->text();
 }
 
 void RecipePage::handle_result(HttpRequestWorker *worker) {
@@ -114,34 +149,32 @@ void RecipePage::handle_result(HttpRequestWorker *worker) {
 
     if (worker->error_type == QNetworkReply::NoError) {
         // communication was successful
-        msg = "Success - Response: " + worker->response;
+        msg = worker->response;
 
-        //format json
-        /*
-        QStringList propertyNames;
-        //QStringList propertyKeys;
-        QString strReply = (QString)msg->readAll();
-        QJsonDocument jsonResponse = QJsonDocument::fromJson(strReply.toUtf8());
-        QJsonObject jsonObject = jsonResponse.object();
-        QJsonArray jsonArray = jsonObject["title"].toArray();
+        //parse json array
+        QJsonDocument document = QJsonDocument::fromJson(msg.toUtf8());
+        QJsonObject object = document.object();
+        QJsonValue value = object.value("recipes");
+        QJsonArray array = value.toArray();
 
-        foreach (const QJsonValue & value, jsonArray) {
+        //put array onto listWidget as titles
+        foreach (const QJsonValue & value, array) {
             QJsonObject obj = value.toObject();
-            propertyNames.append(obj["title"].toString());
-        //    propertyKeys.append(obj["key"].toString());
+            ui->listWidget->addItem(obj["title"].toString());
+            ui->listWidget->addItem(obj["source_url"].toString());
         }
-        */
-        //QJsonDocument doc = QJsonDocument::fromJson(msg.toUtf8());
-        //QString formattedJsonString = doc.toJson(QJsonDocument::Indented);
 
     }
     else {
         // an error occurred
         msg = "Error: " + worker->error_str;
     }
-
-    QMessageBox::information(this, "", msg);
-
+connect(ui->listWidget, SIGNAL(doubleClicked(QModelIndex)), this, SLOT(fuckthislink()));
+/*
+    QMessageBox recmsg;
+    recmsg.information(this, "", msg);
+    recmsg.setDefaultButton(QMessageBox::Save);
+*/
     /*
     //display on next page
     m_myProcess =  new QProcess();
@@ -155,3 +188,4 @@ QProcess* RecipePage::getProcess()
    return  m_myProcess;
 }
 */
+

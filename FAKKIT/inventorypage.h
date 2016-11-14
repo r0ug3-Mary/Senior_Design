@@ -1,5 +1,6 @@
 #ifndef INVENTORYPAGE_H
 #define INVENTORYPAGE_H
+
 #include <QSqlDatabase>
 #include <QDialog>
 #include <QtDebug>
@@ -18,6 +19,12 @@ public:
 
 private slots:
     void on_HomeButton_clicked();
+
+    void on_LowEmpButton_clicked();
+
+    void on_RemoveButton_clicked();
+
+    void on_AllButton_clicked();
 
 private:
     Ui::InventoryPage *ui;

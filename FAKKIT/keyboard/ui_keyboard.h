@@ -21,8 +21,6 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
-#include "keyboard/keyboard.h"
-#include "keyboard/ui_keyboard.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -88,25 +86,27 @@ public:
         sizePolicy.setHeightForWidth(Keyboard->sizePolicy().hasHeightForWidth());
         Keyboard->setSizePolicy(sizePolicy);
         Keyboard->setWindowTitle(QString::fromUtf8("Keyboard"));
-        Keyboard->setStyleSheet(QString::fromUtf8("background-color: rgb(138, 138, 138);"));
+        Keyboard->setStyleSheet(QString::fromUtf8("background-color:#626065;"));
         verticalLayout = new QVBoxLayout(Keyboard);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         lineEdit = new QLineEdit(Keyboard);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);\n"
-"background-color: rgb(255, 255, 255);"));
+        lineEdit->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n"
+"background-color: rgb(168, 165, 173);"));
 
         horizontalLayout->addWidget(lineEdit);
 
         backButton = new QPushButton(Keyboard);
         backButton->setObjectName(QString::fromUtf8("backButton"));
+        backButton->setStyleSheet("color:rgb(255, 255, 255); font-weight: bold;\n");
 
         horizontalLayout->addWidget(backButton);
 
         clear = new QPushButton(Keyboard);
         clear->setObjectName(QString::fromUtf8("clear"));
+        clear->setStyleSheet("color:rgb(255, 255, 255); font-weight: bold;\n");
 
         horizontalLayout->addWidget(clear);
 
@@ -124,6 +124,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonq->sizePolicy().hasHeightForWidth());
         Buttonq->setSizePolicy(sizePolicy1);
         Buttonq->setMinimumSize(QSize(20, 0));
+        Buttonq->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonq, 1, 0, 1, 1);
 
@@ -132,6 +133,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonw->sizePolicy().hasHeightForWidth());
         Buttonw->setSizePolicy(sizePolicy1);
         Buttonw->setMinimumSize(QSize(20, 0));
+        Buttonw->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonw, 1, 1, 1, 1);
 
@@ -140,6 +142,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttone->sizePolicy().hasHeightForWidth());
         Buttone->setSizePolicy(sizePolicy1);
         Buttone->setMinimumSize(QSize(20, 0));
+        Buttone->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttone, 1, 2, 1, 1);
 
@@ -148,6 +151,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonr->sizePolicy().hasHeightForWidth());
         Buttonr->setSizePolicy(sizePolicy1);
         Buttonr->setMinimumSize(QSize(20, 0));
+        Buttonr->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonr, 1, 3, 1, 1);
 
@@ -156,6 +160,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttont->sizePolicy().hasHeightForWidth());
         Buttont->setSizePolicy(sizePolicy1);
         Buttont->setMinimumSize(QSize(20, 0));
+        Buttont->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttont, 1, 4, 1, 1);
 
@@ -164,6 +169,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttony->sizePolicy().hasHeightForWidth());
         Buttony->setSizePolicy(sizePolicy1);
         Buttony->setMinimumSize(QSize(20, 0));
+        Buttony->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttony, 1, 5, 1, 1);
 
@@ -172,6 +178,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonu->sizePolicy().hasHeightForWidth());
         Buttonu->setSizePolicy(sizePolicy1);
         Buttonu->setMinimumSize(QSize(20, 0));
+        Buttonu->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonu, 1, 6, 1, 1);
 
@@ -180,6 +187,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttoni->sizePolicy().hasHeightForWidth());
         Buttoni->setSizePolicy(sizePolicy1);
         Buttoni->setMinimumSize(QSize(20, 0));
+        Buttoni->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttoni, 1, 7, 1, 1);
 
@@ -188,6 +196,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttono->sizePolicy().hasHeightForWidth());
         Buttono->setSizePolicy(sizePolicy1);
         Buttono->setMinimumSize(QSize(20, 0));
+        Buttono->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttono, 1, 8, 1, 1);
 
@@ -196,6 +205,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttons->sizePolicy().hasHeightForWidth());
         Buttons->setSizePolicy(sizePolicy1);
         Buttons->setMinimumSize(QSize(20, 0));
+        Buttons->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttons, 3, 1, 1, 1);
 
@@ -204,6 +214,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttond->sizePolicy().hasHeightForWidth());
         Buttond->setSizePolicy(sizePolicy1);
         Buttond->setMinimumSize(QSize(20, 0));
+        Buttond->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttond, 3, 2, 1, 1);
 
@@ -212,6 +223,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonf->sizePolicy().hasHeightForWidth());
         Buttonf->setSizePolicy(sizePolicy1);
         Buttonf->setMinimumSize(QSize(20, 0));
+        Buttonf->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonf, 3, 3, 1, 1);
 
@@ -220,6 +232,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttong->sizePolicy().hasHeightForWidth());
         Buttong->setSizePolicy(sizePolicy1);
         Buttong->setMinimumSize(QSize(20, 0));
+        Buttong->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttong, 3, 4, 1, 1);
 
@@ -228,6 +241,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonh->sizePolicy().hasHeightForWidth());
         Buttonh->setSizePolicy(sizePolicy1);
         Buttonh->setMinimumSize(QSize(20, 0));
+        Buttonh->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonh, 3, 5, 1, 1);
 
@@ -236,6 +250,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonj->sizePolicy().hasHeightForWidth());
         Buttonj->setSizePolicy(sizePolicy1);
         Buttonj->setMinimumSize(QSize(20, 0));
+        Buttonj->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonj, 3, 6, 1, 1);
 
@@ -244,6 +259,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonl->sizePolicy().hasHeightForWidth());
         Buttonl->setSizePolicy(sizePolicy1);
         Buttonl->setMinimumSize(QSize(20, 0));
+        Buttonl->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonl, 3, 8, 1, 1);
 
@@ -252,6 +268,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonz->sizePolicy().hasHeightForWidth());
         Buttonz->setSizePolicy(sizePolicy1);
         Buttonz->setMinimumSize(QSize(20, 0));
+        Buttonz->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonz, 4, 1, 1, 1);
 
@@ -260,6 +277,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonx->sizePolicy().hasHeightForWidth());
         Buttonx->setSizePolicy(sizePolicy1);
         Buttonx->setMinimumSize(QSize(20, 0));
+        Buttonx->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonx, 4, 2, 1, 1);
 
@@ -268,6 +286,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonv->sizePolicy().hasHeightForWidth());
         Buttonv->setSizePolicy(sizePolicy1);
         Buttonv->setMinimumSize(QSize(20, 0));
+        Buttonv->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonv, 4, 4, 1, 1);
 
@@ -276,6 +295,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonb->sizePolicy().hasHeightForWidth());
         Buttonb->setSizePolicy(sizePolicy1);
         Buttonb->setMinimumSize(QSize(20, 0));
+        Buttonb->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonb, 4, 5, 1, 1);
 
@@ -284,6 +304,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonn->sizePolicy().hasHeightForWidth());
         Buttonn->setSizePolicy(sizePolicy1);
         Buttonn->setMinimumSize(QSize(20, 0));
+        Buttonn->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonn, 4, 6, 1, 1);
 
@@ -292,6 +313,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonm->sizePolicy().hasHeightForWidth());
         Buttonm->setSizePolicy(sizePolicy1);
         Buttonm->setMinimumSize(QSize(20, 0));
+        Buttonm->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonm, 4, 7, 1, 1);
 
@@ -302,12 +324,14 @@ public:
         char_2->setMinimumSize(QSize(20, 0));
         char_2->setCheckable(true);
         char_2->setChecked(false);
+        char_2->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(char_2, 4, 8, 2, 1);
 
         space = new QPushButton(Keyboard);
         space->setObjectName(QString::fromUtf8("space"));
         space->setMinimumSize(QSize(20, 50));
+        space->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(space, 5, 1, 1, 7);
 
@@ -316,6 +340,7 @@ public:
         sizePolicy1.setHeightForWidth(Button0->sizePolicy().hasHeightForWidth());
         Button0->setSizePolicy(sizePolicy1);
         Button0->setMinimumSize(QSize(20, 0));
+        Button0->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button0, 0, 0, 1, 1);
 
@@ -324,6 +349,7 @@ public:
         sizePolicy1.setHeightForWidth(Button1->sizePolicy().hasHeightForWidth());
         Button1->setSizePolicy(sizePolicy1);
         Button1->setMinimumSize(QSize(20, 0));
+        Button1->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button1, 0, 1, 1, 1);
 
@@ -332,6 +358,7 @@ public:
         sizePolicy1.setHeightForWidth(Button2->sizePolicy().hasHeightForWidth());
         Button2->setSizePolicy(sizePolicy1);
         Button2->setMinimumSize(QSize(20, 0));
+        Button2->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button2, 0, 2, 1, 1);
 
@@ -340,6 +367,7 @@ public:
         sizePolicy1.setHeightForWidth(Button3->sizePolicy().hasHeightForWidth());
         Button3->setSizePolicy(sizePolicy1);
         Button3->setMinimumSize(QSize(20, 0));
+        Button3->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button3, 0, 3, 1, 1);
 
@@ -348,6 +376,7 @@ public:
         sizePolicy1.setHeightForWidth(Button4->sizePolicy().hasHeightForWidth());
         Button4->setSizePolicy(sizePolicy1);
         Button4->setMinimumSize(QSize(20, 0));
+        Button4->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button4, 0, 4, 1, 1);
 
@@ -356,6 +385,7 @@ public:
         sizePolicy1.setHeightForWidth(Button5->sizePolicy().hasHeightForWidth());
         Button5->setSizePolicy(sizePolicy1);
         Button5->setMinimumSize(QSize(20, 0));
+        Button5->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button5, 0, 5, 1, 1);
 
@@ -364,6 +394,7 @@ public:
         sizePolicy1.setHeightForWidth(Button6->sizePolicy().hasHeightForWidth());
         Button6->setSizePolicy(sizePolicy1);
         Button6->setMinimumSize(QSize(20, 0));
+        Button6->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button6, 0, 6, 1, 1);
 
@@ -372,6 +403,7 @@ public:
         sizePolicy1.setHeightForWidth(Button7->sizePolicy().hasHeightForWidth());
         Button7->setSizePolicy(sizePolicy1);
         Button7->setMinimumSize(QSize(20, 0));
+        Button7->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button7, 0, 7, 1, 1);
 
@@ -380,6 +412,7 @@ public:
         sizePolicy1.setHeightForWidth(Button8->sizePolicy().hasHeightForWidth());
         Button8->setSizePolicy(sizePolicy1);
         Button8->setMinimumSize(QSize(20, 0));
+        Button8->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button8, 0, 8, 1, 1);
 
@@ -388,6 +421,7 @@ public:
         sizePolicy1.setHeightForWidth(Button9->sizePolicy().hasHeightForWidth());
         Button9->setSizePolicy(sizePolicy1);
         Button9->setMinimumSize(QSize(20, 0));
+        Button9->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Button9, 0, 9, 1, 1);
 
@@ -396,6 +430,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonp->sizePolicy().hasHeightForWidth());
         Buttonp->setSizePolicy(sizePolicy1);
         Buttonp->setMinimumSize(QSize(20, 0));
+        Buttonp->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonp, 1, 9, 1, 1);
 
@@ -404,6 +439,7 @@ public:
         sizePolicy1.setHeightForWidth(enterButton->sizePolicy().hasHeightForWidth());
         enterButton->setSizePolicy(sizePolicy1);
         enterButton->setMinimumSize(QSize(20, 0));
+        enterButton->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(enterButton, 3, 9, 3, 1);
 
@@ -412,6 +448,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttona->sizePolicy().hasHeightForWidth());
         Buttona->setSizePolicy(sizePolicy1);
         Buttona->setMinimumSize(QSize(20, 0));
+        Buttona->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttona, 3, 0, 1, 1);
 
@@ -420,7 +457,7 @@ public:
         sizePolicy1.setHeightForWidth(shift->sizePolicy().hasHeightForWidth());
         shift->setSizePolicy(sizePolicy1);
         shift->setMinimumSize(QSize(20, 0));
-        shift->setStyleSheet(QString::fromUtf8(""));
+        shift->setStyleSheet(QString::fromUtf8("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n"));
         shift->setCheckable(false);
 
         gridLayout->addWidget(shift, 4, 0, 2, 1);
@@ -430,6 +467,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonc->sizePolicy().hasHeightForWidth());
         Buttonc->setSizePolicy(sizePolicy1);
         Buttonc->setMinimumSize(QSize(20, 0));
+        Buttonc->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonc, 4, 3, 1, 1);
 
@@ -438,6 +476,7 @@ public:
         sizePolicy1.setHeightForWidth(Buttonk->sizePolicy().hasHeightForWidth());
         Buttonk->setSizePolicy(sizePolicy1);
         Buttonk->setMinimumSize(QSize(20, 0));
+        Buttonk->setStyleSheet("color:rgb(255, 255, 255); font-size: 12pt; font-weight: bold;\n");
 
         gridLayout->addWidget(Buttonk, 3, 7, 1, 1);
 
