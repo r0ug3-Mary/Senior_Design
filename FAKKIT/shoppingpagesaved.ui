@@ -19,7 +19,7 @@
      <item>
       <widget class="QTextEdit" name="textEdit">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(168, 165, 173);
+        <string notr="true">background-color: #1c1b1b;
 font: bold 12px; color: white;</string>
        </property>
       </widget>
@@ -27,11 +27,10 @@ font: bold 12px; color: white;</string>
      <item>
       <widget class="QPushButton" name="swapButton2">
        <property name="styleSheet">
-        <string notr="true">font: bold 14px;
-    color: white;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
-        <string>&lt;-&gt;</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -51,7 +50,7 @@ font: bold 12px; color: white;</string>
        <item>
         <widget class="QListView" name="listView">
          <property name="styleSheet">
-          <string notr="true">background-color: rgb(168, 165, 173);
+          <string notr="true">background-color: #1c1b1b;
 font: bold 12px; color: white;</string>
          </property>
         </widget>

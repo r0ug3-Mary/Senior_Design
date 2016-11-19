@@ -23,7 +23,6 @@ SOURCES += main.cpp\
     inventorypage.cpp \
     recipepage.cpp \
     viewpage.cpp \
-    lookuppage.cpp \
     httprequestworker.cpp \
     keyboard/keyboard.cpp \
     shoppingpage1.cpp \
@@ -36,7 +35,6 @@ HEADERS  += fak.h \
     inventorypage.h \
     recipepage.h \
     viewpage.h \
-    lookuppage.h \
     httprequestworker.h \
     keyboard/keyboard.h \
     keyboard/ui_keyboard.h \
@@ -50,12 +48,10 @@ HEADERS  += fak.h \
 FORMS    += fak.ui \
     recipepage.ui \
     viewpage.ui \
-    lookuppage.ui \
     keyboard/keyboard.ui \
     shoppingpage1.ui \
     shoppingpagesaved.ui \
-    inventorypage.ui \
-    recentpage.ui
+    inventorypage.ui
 
 DISTFILES += \
     RecipeLookUpPython.py \

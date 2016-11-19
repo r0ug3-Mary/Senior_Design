@@ -16,10 +16,14 @@ ViewPage::ViewPage(QWidget *parent) :
 {
 
     ui->setupUi(this);
+    QDialog::showFullScreen();
     this->setStyleSheet("background-color:#626065;");
+    ui->HomeButton4->setStyleSheet("font: bold 32px; color: white;");
+    ui->label->setStyleSheet("font: bold 24px; color: white;");
+    ui->labelpic->setStyleSheet("font: bold 24px; color: white;");
 
 
-    QImage image(":/pics/fridgeSTILLS_18.jpg");
+    QImage image("/var/www/capture_top.jpg");
     ui->labelpic->setPixmap(QPixmap::fromImage(image));
 
     ui->rightButton->setFlat(true);
@@ -42,21 +46,22 @@ void ViewPage::on_rightButton_clicked()
 
     if(i == 2)
     {
-        QImage image(":/pics/fridgeSTILLS_18.jpg");
+        QImage image("/var/www/capture_top.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i = 0;
     }else if(i == 1)
     {
-        QImage image(":/pics/thing1.jpg");
+        QImage image("/var/www/capture_mid.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i++;
     }else if(i == 0)
     {
-        QImage image(":/pics/man2.jpg");
+        QImage image("/var/www/capture_low.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i++;
     }
 
+    //ui->rightButton->clearFocus();
 
 
 }
@@ -66,20 +71,23 @@ void ViewPage::on_leftButton_clicked()
 {
     if(i == 0)
     {
-        QImage image(":/pics/thing1.jpg");
+        QImage image("/var/www/capture_low.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i = 2;
     }else if(i == 1)
     {
-        QImage image(":/pics/fridgeSTILLS_18.jpg");
+        QImage image("/var/www/capture_top.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i--;
     }else if(i == 2)
     {
-        QImage image(":/pics/man2.jpg");
+        QImage image("/var/www/capture_mid.jpg");
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i--;
     }
+
+    //ui->leftButton->clearFocus();
+
 }
 
 

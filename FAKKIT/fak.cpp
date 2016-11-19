@@ -19,17 +19,22 @@ FAK::FAK(QWidget *parent) :
     ui(new Ui::FAK)
 {
     ui->setupUi(this);
+    //QMainWindow::showFullScreen();
     this->setStyleSheet("background-color:#626065;");
 
     //set button imgs and size
     ui->InventoryButton->setIcon(QIcon(":/pics/inventorybutton.png"));
-    ui->InventoryButton->setIconSize(QSize(388,238));
+    //ui->InventoryButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    ui->InventoryButton->setIconSize(QSize(600,325));
     ui->RecipeButton->setIcon(QIcon(":/pics/recipebutton.png"));
-    ui->RecipeButton->setIconSize(QSize(388,238));
+    //ui->RecipeButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    ui->RecipeButton->setIconSize(QSize(600,325));
     ui->ShoppingButton->setIcon(QIcon(":/pics/shoppingbutton.png"));
-    ui->ShoppingButton->setIconSize(QSize(388,238));
+    //ui->ShoppingButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    ui->ShoppingButton->setIconSize(QSize(600,325));
     ui->pushButton->setIcon(QIcon(":/pics/picturebutton.png"));
-    ui->pushButton->setIconSize(QSize(388,238));
+    //ui->pushButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    ui->pushButton->setIconSize(QSize(600,325));
 }
 
 FAK::~FAK()
@@ -41,7 +46,6 @@ FAK::~FAK()
 void FAK::on_InventoryButton_clicked()
 {
     InventoryPage inventoryPage;
-    //inventoryPage.setModal(true);
     inventoryPage.exec();
 }
 
@@ -82,6 +86,5 @@ void FAK::on_ShoppingButton_clicked()
 void FAK::on_pushButton_clicked()
 {
     ViewPage viewPage;
-    //viewPage.setModal(true);
     viewPage.exec();
 }

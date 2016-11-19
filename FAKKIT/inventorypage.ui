@@ -10,6 +10,19 @@
     <height>641</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>DejaVu Sans</family>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
@@ -20,7 +33,7 @@
    <item row="0" column="0">
     <widget class="QTableView" name="tableView">
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(168, 165, 173);
+      <string notr="true">background-color: #1c1b1b;
 font: bold 14px;\n    color: white;</string>
      </property>
     </widget>
@@ -62,6 +75,14 @@ font: bold 14px;\n    color: white;</string>
      </item>
      <item>
       <widget class="QPushButton" name="HomeButton">
+       <property name="font">
+        <font>
+         <pointsize>-1</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
         <string notr="true">font: bold 14px;
     color: white;</string>

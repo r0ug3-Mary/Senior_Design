@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>db/fakdb4.db</file>
+        <file>../../../dbitems.db</file>
+        <file>../../../permanentdb.db</file>
     </qresource>
 </RCC>

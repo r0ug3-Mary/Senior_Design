@@ -1,4 +1,4 @@
-#include "inventorypage.h"
+﻿#include "inventorypage.h"
 #include "ui_inventorypage.h"
 #include "fak.h"
 #include "dbmanager.h"
@@ -12,21 +12,49 @@
 #include <QSqlQueryModel>
 #include <QSqlTableModel>
 
-//static const QString path = "/home/pi/Desktop/FAKKIT/db/fakdb4.db";
-
 InventoryPage::InventoryPage(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::InventoryPage)
 {
     ui->setupUi(this);
+    QDialog:showFullScreen();
     this->setStyleSheet("background-color:#626065;");
+    ui->tableView->horizontalHeader()->setStyleSheet("color:black");
+    ui->tableView->verticalHeader()->setStyleSheet("color:black");
+    ui->tableView->setStyleSheet("background-color: #1c1b1b; font: bold 24px; color: white;");
+    //ui->tableView->verticalHeader()->setDefaultSectionSize(50);
+    connect(ui->tableView->horizontalHeader(), SIGNAL(sectionResized(int,int,int)), ui->tableView, SLOT(resizeRowsToContents()));
+
+    //ui->tableView->resizeColumnsToContents();
+    //ui->tableView->setColumnWidth(2,50);
+    //ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
+    //void QTableView::setColumnWidth(2,50);
+
+    //ui->tableView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    //ui->tableView->horizontalHeader()->setResizeContentsPrecision(2,50);
+
+/*    ui->tableView->resizeColumnsToContents(); // Adjust the column width.
+    ui->tableView->setColumnWidth( 2, 50 );
+*/
+    ui->AllButton->setStyleSheet("font: bold 32px; color: white;");
+    ui->HomeButton->setStyleSheet("font: bold 32px; color: white;");
+    ui->LowEmpButton->setStyleSheet("font: bold 32px; color: white;");
+    ui->RemoveButton->setStyleSheet("font: bold 32px; color: white;");
 
     QSqlQueryModel *modal =new QSqlQueryModel();
     DbManager db(path);
     QSqlQuery* query = new QSqlQuery();
+    query->exec("DELETE FROM Main WHERE rowid NOT IN (SELECT MAX(rowid) FROM Main GROUP BY Name)");
     query->exec("SELECT * FROM Main");
     modal->setQuery(*query);
     ui->tableView->setModel(modal);
+    for (int c = 0; c < 2/*ui->tableView->horizontalHeader()->count()*/; ++c)
+    {
+        ui->tableView->horizontalHeader()->setSectionResizeMode(
+            c, QHeaderView::Stretch);
+        //ui->tableView->horizontalHeader()->resizeSection(2,20);
+    }
+    ui->tableView->horizontalHeader()->resizeSection(2,125);
 }
 
 InventoryPage::~InventoryPage()
@@ -43,7 +71,7 @@ void InventoryPage::on_LowEmpButton_clicked()
 {
     QSqlQueryModel *modal =new QSqlQueryModel();
     QSqlQuery* query = new QSqlQuery();
-    query->exec("SELECT * FROM Main WHERE amount == 'Low' or amount == 'Empty'");
+    query->exec("SELECT * FROM Main WHERE Amount == 'Low' or Amount == 'Empty'");
     modal->setQuery(*query);
     ui->tableView->setModel(modal);
 }
@@ -56,13 +84,17 @@ void InventoryPage::on_RemoveButton_clicked()
     int ID = ui->tableView->selectionModel()->currentIndex().row();
     qDebug() << ID;
 
-    QString tablename = ui->tableView->model()->data(ui->tableView->model()->index(ID,1)).toString();
+    QString tablename = ui->tableView->model()->data(ui->tableView->model()->index(ID,0)).toString();
     qDebug() << tablename;
 
-    query->prepare("DELETE FROM Main WHERE name = (:ref_name)");
-    query->bindValue(":ref_name",tablename);
+    query->prepare("DELETE FROM Main WHERE Name = (:ref_name)");
+
+    query->bindValue(":ref_name", tablename);
+
     query->exec();
+
     query->exec("SELECT * FROM Main");
+
     modal->setQuery(*query);
     ui->tableView->setModel(modal);
 }
@@ -75,4 +107,3 @@ void InventoryPage::on_AllButton_clicked()
     modal->setQuery(*query);
     ui->tableView->setModel(modal);
 }
-

@@ -33,7 +33,7 @@
         <widget class="QTextEdit" name="textEdit">
          <property name="styleSheet">
           <string notr="true">background-color: rgb(168, 165, 173);
-font: bold 12px; color: white;</string>
+font: bold 12px; color: #1c1b1b;</string>
          </property>
         </widget>
        </item>
@@ -42,11 +42,10 @@ font: bold 12px; color: white;</string>
      <item>
       <widget class="QPushButton" name="swapButton">
        <property name="styleSheet">
-        <string notr="true">font: bold 14px;
-    color: white;</string>
+        <string notr="true"/>
        </property>
        <property name="text">
-        <string>&lt;-&gt;</string>
+        <string/>
        </property>
       </widget>
      </item>

@@ -4,8 +4,8 @@
 #include <QDialog>
 #include <QtDebug>
 
-static const QString path = "/home/r0ug3/Desktop/FAKKIT/db/fakdb4.db";
-
+static const QString path = "/var/www/permanentdb.db";
+static const QString path2 = "/var/www/dbitems.db";
 
 class DbManager
 {
