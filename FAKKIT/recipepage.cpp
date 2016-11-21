@@ -40,12 +40,17 @@ RecipePage::RecipePage(QWidget *parent) :
 {
     ui->setupUi(this);
     QDialog::showMaximized();
+
     this->setStyleSheet("background-color:#626065;");
     ui->MoveOver->setStyleSheet("background-image: url(:/pics/next.png) 0 0 0 0 stretch stretch; background-position: center; background-repeat: repeat-false;");
         ui->MoveOver->setMinimumHeight(50);
         ui->MoveOver->setMinimumWidth(50);
         ui->InventoryList->setStyleSheet("background-color: #1c1b1b; font: bold 24px; color: white;");
+        ui->InventoryList->setWordWrap(true);
+        ui->InventoryList->setTextElideMode(Qt::ElideNone);
         ui->listWidget->setStyleSheet("background-color: #1c1b1b; font: bold 24px; color: white;");
+        ui->listWidget->setWordWrap(true);
+        ui->listWidget->setTextElideMode(Qt::ElideNone);
         ui->RecipeParams->setStyleSheet("background-color: #1c1b1b; font: bold 24px; color: white;");
         ui->HomeButton2->setStyleSheet("font: bold 32px; color: white;");
         ui->SearchButton->setStyleSheet("font: bold 32px; color: white;");

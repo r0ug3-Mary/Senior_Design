@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'keyboard.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'keyboard.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.7.0. It"
+#error "This file was generated using the moc from 5.3.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,28 +20,27 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_Keyboard_t {
     QByteArrayData data[12];
-    char stringdata0[186];
+    char stringdata[186];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_Keyboard_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_Keyboard_t, stringdata) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_Keyboard_t qt_meta_stringdata_Keyboard = {
     {
-QT_MOC_LITERAL(0, 0, 8), // "Keyboard"
-QT_MOC_LITERAL(1, 9, 15), // "keyboardHandler"
-QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 16), // "on_shift_clicked"
-QT_MOC_LITERAL(4, 43, 17), // "on_char_2_toggled"
-QT_MOC_LITERAL(5, 61, 7), // "checked"
-QT_MOC_LITERAL(6, 69, 16), // "on_clear_clicked"
-QT_MOC_LITERAL(7, 86, 22), // "on_enterButton_clicked"
-QT_MOC_LITERAL(8, 109, 23), // "on_lineEdit_textChanged"
-QT_MOC_LITERAL(9, 133, 4), // "arg1"
-QT_MOC_LITERAL(10, 138, 25), // "on_lineEdit_returnPressed"
-QT_MOC_LITERAL(11, 164, 21) // "on_backButton_clicked"
-
+QT_MOC_LITERAL(0, 0, 8),
+QT_MOC_LITERAL(1, 9, 15),
+QT_MOC_LITERAL(2, 25, 0),
+QT_MOC_LITERAL(3, 26, 16),
+QT_MOC_LITERAL(4, 43, 17),
+QT_MOC_LITERAL(5, 61, 7),
+QT_MOC_LITERAL(6, 69, 16),
+QT_MOC_LITERAL(7, 86, 22),
+QT_MOC_LITERAL(8, 109, 23),
+QT_MOC_LITERAL(9, 133, 4),
+QT_MOC_LITERAL(10, 138, 25),
+QT_MOC_LITERAL(11, 164, 21)
     },
     "Keyboard\0keyboardHandler\0\0on_shift_clicked\0"
     "on_char_2_toggled\0checked\0on_clear_clicked\0"
@@ -91,7 +90,6 @@ void Keyboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         Keyboard *_t = static_cast<Keyboard *>(_o);
-        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->keyboardHandler(); break;
         case 1: _t->on_shift_clicked(); break;
@@ -108,7 +106,7 @@ void Keyboard::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
 
 const QMetaObject Keyboard::staticMetaObject = {
     { &QWidget::staticMetaObject, qt_meta_stringdata_Keyboard.data,
-      qt_meta_data_Keyboard,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_Keyboard,  qt_static_metacall, 0, 0}
 };
 
 
@@ -119,8 +117,8 @@ const QMetaObject *Keyboard::metaObject() const
 
 void *Keyboard::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_Keyboard.stringdata0))
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_Keyboard.stringdata))
         return static_cast<void*>(const_cast< Keyboard*>(this));
     return QWidget::qt_metacast(_clname);
 }

@@ -22,20 +22,8 @@ InventoryPage::InventoryPage(QWidget *parent) :
     ui->tableView->horizontalHeader()->setStyleSheet("color:black");
     ui->tableView->verticalHeader()->setStyleSheet("color:black");
     ui->tableView->setStyleSheet("background-color: #1c1b1b; font: bold 24px; color: white;");
-    //ui->tableView->verticalHeader()->setDefaultSectionSize(50);
     connect(ui->tableView->horizontalHeader(), SIGNAL(sectionResized(int,int,int)), ui->tableView, SLOT(resizeRowsToContents()));
 
-    //ui->tableView->resizeColumnsToContents();
-    //ui->tableView->setColumnWidth(2,50);
-    //ui->tableView->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    //void QTableView::setColumnWidth(2,50);
-
-    //ui->tableView->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
-    //ui->tableView->horizontalHeader()->setResizeContentsPrecision(2,50);
-
-/*    ui->tableView->resizeColumnsToContents(); // Adjust the column width.
-    ui->tableView->setColumnWidth( 2, 50 );
-*/
     ui->AllButton->setStyleSheet("font: bold 32px; color: white;");
     ui->HomeButton->setStyleSheet("font: bold 32px; color: white;");
     ui->LowEmpButton->setStyleSheet("font: bold 32px; color: white;");
@@ -48,6 +36,7 @@ InventoryPage::InventoryPage(QWidget *parent) :
     query->exec("SELECT * FROM Main");
     modal->setQuery(*query);
     ui->tableView->setModel(modal);
+
     for (int c = 0; c < 2/*ui->tableView->horizontalHeader()->count()*/; ++c)
     {
         ui->tableView->horizontalHeader()->setSectionResizeMode(
@@ -55,6 +44,12 @@ InventoryPage::InventoryPage(QWidget *parent) :
         //ui->tableView->horizontalHeader()->resizeSection(2,20);
     }
     ui->tableView->horizontalHeader()->resizeSection(2,125);
+
+    for (int c = 0; c < 2; ++c)
+    {
+        ui->tableView->horizontalHeader()->setSectionResizeMode(
+            c, QHeaderView::Stretch);
+    }
 }
 
 InventoryPage::~InventoryPage()

@@ -18,13 +18,16 @@ ViewPage::ViewPage(QWidget *parent) :
     ui->setupUi(this);
     QDialog::showFullScreen();
     this->setStyleSheet("background-color:#626065;");
+    //this->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
     ui->HomeButton4->setStyleSheet("font: bold 32px; color: white;");
+    //ui->HomeButton4->setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);
     ui->label->setStyleSheet("font: bold 24px; color: white;");
     ui->labelpic->setStyleSheet("font: bold 24px; color: white;");
 
 
     QImage image("/var/www/capture_top.jpg");
     ui->labelpic->setPixmap(QPixmap::fromImage(image));
+    //ui->labelpic->setFixedSize(1100,640);
 
     ui->rightButton->setFlat(true);
     //ui->rightButton->setStylesheet{ QPushButton:flat {   border: none; }};
@@ -60,6 +63,7 @@ void ViewPage::on_rightButton_clicked()
         ui->labelpic->setPixmap(QPixmap::fromImage(image));
         i++;
     }
+
 
     //ui->rightButton->clearFocus();
 

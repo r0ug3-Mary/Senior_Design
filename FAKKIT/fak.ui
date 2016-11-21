@@ -66,9 +66,7 @@ border-top-color: rgb(0, 0, 255);
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true">
-
-</string>
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>

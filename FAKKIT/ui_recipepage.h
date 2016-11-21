@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'recipepage.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -14,6 +14,7 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -23,14 +24,13 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QVBoxLayout>
-#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_RecipePage
 {
 public:
-    QWidget *layoutWidget;
+    QGridLayout *gridLayout;
     QVBoxLayout *verticalLayout;
     QHBoxLayout *horizontalLayout_8;
     QSpacerItem *horizontalSpacer_4;
@@ -45,7 +45,6 @@ public:
     QPushButton *MoveOver;
     QTextEdit *RecipeParams;
     QListWidget *listWidget;
-    QWidget *horizontalLayoutWidget_2;
     QHBoxLayout *horizontalLayout_11;
     QLabel *labelwht;
     QPushButton *SearchButton;
@@ -57,13 +56,16 @@ public:
         if (RecipePage->objectName().isEmpty())
             RecipePage->setObjectName(QStringLiteral("RecipePage"));
         RecipePage->resize(800, 480);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(RecipePage->sizePolicy().hasHeightForWidth());
+        RecipePage->setSizePolicy(sizePolicy);
         RecipePage->setStyleSheet(QStringLiteral(""));
-        layoutWidget = new QWidget(RecipePage);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 7, 781, 411));
-        verticalLayout = new QVBoxLayout(layoutWidget);
+        gridLayout = new QGridLayout(RecipePage);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
-        verticalLayout->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setObjectName(QStringLiteral("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(-1, -1, 0, -1);
@@ -71,13 +73,13 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer_4);
 
-        labelcurr = new QLabel(layoutWidget);
+        labelcurr = new QLabel(RecipePage);
         labelcurr->setObjectName(QStringLiteral("labelcurr"));
-        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Minimum);
-        sizePolicy.setHorizontalStretch(0);
-        sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(labelcurr->sizePolicy().hasHeightForWidth());
-        labelcurr->setSizePolicy(sizePolicy);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Minimum);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(labelcurr->sizePolicy().hasHeightForWidth());
+        labelcurr->setSizePolicy(sizePolicy1);
         labelcurr->setMaximumSize(QSize(16777215, 838607));
         labelcurr->setStyleSheet(QLatin1String("font: bold 12px;\n"
 "    color: white;"));
@@ -88,13 +90,13 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer);
 
-        labellook = new QLabel(layoutWidget);
+        labellook = new QLabel(RecipePage);
         labellook->setObjectName(QStringLiteral("labellook"));
-        QSizePolicy sizePolicy1(QSizePolicy::Maximum, QSizePolicy::Minimum);
-        sizePolicy1.setHorizontalStretch(0);
-        sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(labellook->sizePolicy().hasHeightForWidth());
-        labellook->setSizePolicy(sizePolicy1);
+        QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Minimum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(labellook->sizePolicy().hasHeightForWidth());
+        labellook->setSizePolicy(sizePolicy2);
         labellook->setStyleSheet(QLatin1String("font: bold 12px;\n"
 "    color: white;"));
 
@@ -104,13 +106,13 @@ public:
 
         horizontalLayout_8->addItem(horizontalSpacer_3);
 
-        label = new QLabel(layoutWidget);
+        label = new QLabel(RecipePage);
         label->setObjectName(QStringLiteral("label"));
-        QSizePolicy sizePolicy2(QSizePolicy::Maximum, QSizePolicy::Maximum);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy2);
+        QSizePolicy sizePolicy3(QSizePolicy::Maximum, QSizePolicy::Maximum);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
+        label->setSizePolicy(sizePolicy3);
         label->setStyleSheet(QLatin1String("font: bold 12px;\n"
 "    color: white;"));
 
@@ -125,20 +127,20 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
-        InventoryList = new QListView(layoutWidget);
+        InventoryList = new QListView(RecipePage);
         InventoryList->setObjectName(QStringLiteral("InventoryList"));
         InventoryList->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
 "font: bold 12px; color: white;"));
 
         horizontalLayout->addWidget(InventoryList);
 
-        MoveOver = new QPushButton(layoutWidget);
+        MoveOver = new QPushButton(RecipePage);
         MoveOver->setObjectName(QStringLiteral("MoveOver"));
-        QSizePolicy sizePolicy3(QSizePolicy::Fixed, QSizePolicy::Fixed);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(MoveOver->sizePolicy().hasHeightForWidth());
-        MoveOver->setSizePolicy(sizePolicy3);
+        QSizePolicy sizePolicy4(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy4.setHorizontalStretch(0);
+        sizePolicy4.setVerticalStretch(0);
+        sizePolicy4.setHeightForWidth(MoveOver->sizePolicy().hasHeightForWidth());
+        MoveOver->setSizePolicy(sizePolicy4);
         MoveOver->setMaximumSize(QSize(25, 16777215));
         MoveOver->setAutoFillBackground(false);
         MoveOver->setStyleSheet(QLatin1String("background-image: url(:/pics/next.png);\n"
@@ -148,20 +150,20 @@ public:
 
         horizontalLayout->addWidget(MoveOver);
 
-        RecipeParams = new QTextEdit(layoutWidget);
+        RecipeParams = new QTextEdit(RecipePage);
         RecipeParams->setObjectName(QStringLiteral("RecipeParams"));
-        QSizePolicy sizePolicy4(QSizePolicy::Maximum, QSizePolicy::Expanding);
-        sizePolicy4.setHorizontalStretch(0);
-        sizePolicy4.setVerticalStretch(0);
-        sizePolicy4.setHeightForWidth(RecipeParams->sizePolicy().hasHeightForWidth());
-        RecipeParams->setSizePolicy(sizePolicy4);
+        QSizePolicy sizePolicy5(QSizePolicy::Maximum, QSizePolicy::Expanding);
+        sizePolicy5.setHorizontalStretch(0);
+        sizePolicy5.setVerticalStretch(0);
+        sizePolicy5.setHeightForWidth(RecipeParams->sizePolicy().hasHeightForWidth());
+        RecipeParams->setSizePolicy(sizePolicy5);
         RecipeParams->setMaximumSize(QSize(150, 16777215));
         RecipeParams->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
 "font: bold 12px; color: white;"));
 
         horizontalLayout->addWidget(RecipeParams);
 
-        listWidget = new QListWidget(layoutWidget);
+        listWidget = new QListWidget(RecipePage);
         listWidget->setObjectName(QStringLiteral("listWidget"));
         listWidget->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
 "font: bold 12px; color: white;"));
@@ -171,29 +173,29 @@ public:
 
         verticalLayout->addLayout(horizontalLayout);
 
-        horizontalLayoutWidget_2 = new QWidget(RecipePage);
-        horizontalLayoutWidget_2->setObjectName(QStringLiteral("horizontalLayoutWidget_2"));
-        horizontalLayoutWidget_2->setGeometry(QRect(11, 431, 781, 41));
-        horizontalLayout_11 = new QHBoxLayout(horizontalLayoutWidget_2);
+
+        gridLayout->addLayout(verticalLayout, 0, 0, 1, 1);
+
+        horizontalLayout_11 = new QHBoxLayout();
         horizontalLayout_11->setObjectName(QStringLiteral("horizontalLayout_11"));
-        horizontalLayout_11->setContentsMargins(0, 0, 0, 0);
-        labelwht = new QLabel(horizontalLayoutWidget_2);
+        horizontalLayout_11->setSizeConstraint(QLayout::SetDefaultConstraint);
+        labelwht = new QLabel(RecipePage);
         labelwht->setObjectName(QStringLiteral("labelwht"));
-        QSizePolicy sizePolicy5(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(labelwht->sizePolicy().hasHeightForWidth());
-        labelwht->setSizePolicy(sizePolicy5);
+        QSizePolicy sizePolicy6(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        sizePolicy6.setHorizontalStretch(0);
+        sizePolicy6.setVerticalStretch(0);
+        sizePolicy6.setHeightForWidth(labelwht->sizePolicy().hasHeightForWidth());
+        labelwht->setSizePolicy(sizePolicy6);
         labelwht->setStyleSheet(QLatin1String("font: bold 12px;\n"
 "    color: white;"));
         labelwht->setWordWrap(true);
 
         horizontalLayout_11->addWidget(labelwht);
 
-        SearchButton = new QPushButton(horizontalLayoutWidget_2);
+        SearchButton = new QPushButton(RecipePage);
         SearchButton->setObjectName(QStringLiteral("SearchButton"));
-        sizePolicy3.setHeightForWidth(SearchButton->sizePolicy().hasHeightForWidth());
-        SearchButton->setSizePolicy(sizePolicy3);
+        sizePolicy4.setHeightForWidth(SearchButton->sizePolicy().hasHeightForWidth());
+        SearchButton->setSizePolicy(sizePolicy4);
         SearchButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
 "    color: white;"));
 
@@ -203,18 +205,21 @@ public:
 
         horizontalLayout_11->addItem(horizontalSpacer_2);
 
-        HomeButton2 = new QPushButton(horizontalLayoutWidget_2);
+        HomeButton2 = new QPushButton(RecipePage);
         HomeButton2->setObjectName(QStringLiteral("HomeButton2"));
-        QSizePolicy sizePolicy6(QSizePolicy::Maximum, QSizePolicy::Fixed);
-        sizePolicy6.setHorizontalStretch(0);
-        sizePolicy6.setVerticalStretch(0);
-        sizePolicy6.setHeightForWidth(HomeButton2->sizePolicy().hasHeightForWidth());
-        HomeButton2->setSizePolicy(sizePolicy6);
+        QSizePolicy sizePolicy7(QSizePolicy::Maximum, QSizePolicy::Fixed);
+        sizePolicy7.setHorizontalStretch(0);
+        sizePolicy7.setVerticalStretch(0);
+        sizePolicy7.setHeightForWidth(HomeButton2->sizePolicy().hasHeightForWidth());
+        HomeButton2->setSizePolicy(sizePolicy7);
         HomeButton2->setLayoutDirection(Qt::RightToLeft);
         HomeButton2->setStyleSheet(QLatin1String("font: bold 14px;\n"
 "    color: white;"));
 
         horizontalLayout_11->addWidget(HomeButton2);
+
+
+        gridLayout->addLayout(horizontalLayout_11, 1, 0, 1, 1);
 
 
         retranslateUi(RecipePage);

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'fak.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -103,6 +103,7 @@ public:
         pushButton->setAutoFillBackground(false);
         pushButton->setStyleSheet(QStringLiteral(""));
         pushButton->setAutoDefault(false);
+        pushButton->setDefault(false);
         pushButton->setFlat(false);
 
         gridLayout->addWidget(pushButton, 1, 1, 1, 1);
@@ -110,9 +111,6 @@ public:
         FAK->setCentralWidget(centralWidget);
 
         retranslateUi(FAK);
-
-        pushButton->setDefault(false);
-
 
         QMetaObject::connectSlotsByName(FAK);
     } // setupUi

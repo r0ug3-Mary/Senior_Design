@@ -51,7 +51,8 @@ FORMS    += fak.ui \
     keyboard/keyboard.ui \
     shoppingpage1.ui \
     shoppingpagesaved.ui \
-    inventorypage.ui
+    inventorypage.ui \
+    recentpage.ui
 
 DISTFILES += \
     RecipeLookUpPython.py \

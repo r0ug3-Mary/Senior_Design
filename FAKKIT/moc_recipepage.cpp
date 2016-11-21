@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'recipepage.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.7.0)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.3.2)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
@@ -12,7 +12,7 @@
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'recipepage.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.7.0. It"
+#error "This file was generated using the moc from 5.3.2. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -20,26 +20,25 @@
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_RecipePage_t {
     QByteArrayData data[10];
-    char stringdata0[154];
+    char stringdata[154];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
-    qptrdiff(offsetof(qt_meta_stringdata_RecipePage_t, stringdata0) + ofs \
+    qptrdiff(offsetof(qt_meta_stringdata_RecipePage_t, stringdata) + ofs \
         - idx * sizeof(QByteArrayData)) \
     )
 static const qt_meta_stringdata_RecipePage_t qt_meta_stringdata_RecipePage = {
     {
-QT_MOC_LITERAL(0, 0, 10), // "RecipePage"
-QT_MOC_LITERAL(1, 11, 22), // "on_HomeButton2_clicked"
-QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 23), // "on_SearchButton_clicked"
-QT_MOC_LITERAL(4, 59, 13), // "handle_result"
-QT_MOC_LITERAL(5, 73, 18), // "HttpRequestWorker*"
-QT_MOC_LITERAL(6, 92, 6), // "worker"
-QT_MOC_LITERAL(7, 99, 19), // "on_MoveOver_clicked"
-QT_MOC_LITERAL(8, 119, 21), // "run_keyboard_lineEdit"
-QT_MOC_LITERAL(9, 141, 12) // "fuckthislink"
-
+QT_MOC_LITERAL(0, 0, 10),
+QT_MOC_LITERAL(1, 11, 22),
+QT_MOC_LITERAL(2, 34, 0),
+QT_MOC_LITERAL(3, 35, 23),
+QT_MOC_LITERAL(4, 59, 13),
+QT_MOC_LITERAL(5, 73, 18),
+QT_MOC_LITERAL(6, 92, 6),
+QT_MOC_LITERAL(7, 99, 19),
+QT_MOC_LITERAL(8, 119, 21),
+QT_MOC_LITERAL(9, 141, 12)
     },
     "RecipePage\0on_HomeButton2_clicked\0\0"
     "on_SearchButton_clicked\0handle_result\0"
@@ -84,7 +83,6 @@ void RecipePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 {
     if (_c == QMetaObject::InvokeMetaMethod) {
         RecipePage *_t = static_cast<RecipePage *>(_o);
-        Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_HomeButton2_clicked(); break;
         case 1: _t->on_SearchButton_clicked(); break;
@@ -110,7 +108,7 @@ void RecipePage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
 
 const QMetaObject RecipePage::staticMetaObject = {
     { &QDialog::staticMetaObject, qt_meta_stringdata_RecipePage.data,
-      qt_meta_data_RecipePage,  qt_static_metacall, Q_NULLPTR, Q_NULLPTR}
+      qt_meta_data_RecipePage,  qt_static_metacall, 0, 0}
 };
 
 
@@ -121,8 +119,8 @@ const QMetaObject *RecipePage::metaObject() const
 
 void *RecipePage::qt_metacast(const char *_clname)
 {
-    if (!_clname) return Q_NULLPTR;
-    if (!strcmp(_clname, qt_meta_stringdata_RecipePage.stringdata0))
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_RecipePage.stringdata))
         return static_cast<void*>(const_cast< RecipePage*>(this));
     return QDialog::qt_metacast(_clname);
 }

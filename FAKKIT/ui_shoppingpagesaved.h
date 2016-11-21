@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'shoppingpagesaved.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -55,15 +55,14 @@ public:
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
         textEdit = new QTextEdit(ShoppingPageSaved);
         textEdit->setObjectName(QStringLiteral("textEdit"));
-        textEdit->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+        textEdit->setStyleSheet(QLatin1String("background-color: #1c1b1b;\n"
 "font: bold 12px; color: white;"));
 
         horizontalLayout_2->addWidget(textEdit);
 
         swapButton2 = new QPushButton(ShoppingPageSaved);
         swapButton2->setObjectName(QStringLiteral("swapButton2"));
-        swapButton2->setStyleSheet(QLatin1String("font: bold 14px;\n"
-"    color: white;"));
+        swapButton2->setStyleSheet(QStringLiteral(""));
 
         horizontalLayout_2->addWidget(swapButton2);
 
@@ -78,7 +77,7 @@ public:
 
         listView = new QListView(ShoppingPageSaved);
         listView->setObjectName(QStringLiteral("listView"));
-        listView->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+        listView->setStyleSheet(QLatin1String("background-color: #1c1b1b;\n"
 "font: bold 12px; color: white;"));
 
         verticalLayout->addWidget(listView);
@@ -146,7 +145,7 @@ public:
     void retranslateUi(QDialog *ShoppingPageSaved)
     {
         ShoppingPageSaved->setWindowTitle(QApplication::translate("ShoppingPageSaved", "Dialog", 0));
-        swapButton2->setText(QApplication::translate("ShoppingPageSaved", "<->", 0));
+        swapButton2->setText(QString());
         label->setText(QApplication::translate("ShoppingPageSaved", "Empty Items", 0));
         label_2->setText(QApplication::translate("ShoppingPageSaved", "Low on:", 0));
         pushButton->setText(QApplication::translate("ShoppingPageSaved", "Add", 0));

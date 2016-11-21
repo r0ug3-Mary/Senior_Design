@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'inventorypage.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -38,12 +38,22 @@ public:
         if (InventoryPage->objectName().isEmpty())
             InventoryPage->setObjectName(QStringLiteral("InventoryPage"));
         InventoryPage->resize(682, 641);
+        QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(InventoryPage->sizePolicy().hasHeightForWidth());
+        InventoryPage->setSizePolicy(sizePolicy);
+        QFont font;
+        font.setFamily(QStringLiteral("DejaVu Sans"));
+        font.setBold(true);
+        font.setWeight(75);
+        InventoryPage->setFont(font);
         InventoryPage->setStyleSheet(QStringLiteral(""));
         gridLayout = new QGridLayout(InventoryPage);
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         tableView = new QTableView(InventoryPage);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
+        tableView->setStyleSheet(QLatin1String("background-color: #1c1b1b;\n"
 "font: bold 14px;\\n    color: white;"));
 
         gridLayout->addWidget(tableView, 0, 0, 1, 1);
@@ -73,6 +83,11 @@ public:
 
         HomeButton = new QPushButton(InventoryPage);
         HomeButton->setObjectName(QStringLiteral("HomeButton"));
+        QFont font1;
+        font1.setBold(true);
+        font1.setItalic(false);
+        font1.setWeight(75);
+        HomeButton->setFont(font1);
         HomeButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
 "    color: white;"));
 

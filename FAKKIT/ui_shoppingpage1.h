@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'shoppingpage1.ui'
 **
-** Created by: Qt User Interface Compiler version 5.7.0
+** Created by: Qt User Interface Compiler version 5.3.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -65,7 +65,7 @@ public:
         textEdit = new QTextEdit(ShoppingPage1);
         textEdit->setObjectName(QStringLiteral("textEdit"));
         textEdit->setStyleSheet(QLatin1String("background-color: rgb(168, 165, 173);\n"
-"font: bold 12px; color: white;"));
+"font: bold 12px; color: #1c1b1b;"));
 
         verticalLayout_2->addWidget(textEdit);
 
@@ -74,8 +74,7 @@ public:
 
         swapButton = new QPushButton(ShoppingPage1);
         swapButton->setObjectName(QStringLiteral("swapButton"));
-        swapButton->setStyleSheet(QLatin1String("font: bold 14px;\n"
-"    color: white;"));
+        swapButton->setStyleSheet(QStringLiteral(""));
 
         horizontalLayout->addWidget(swapButton);
 
@@ -145,7 +144,7 @@ public:
     {
         ShoppingPage1->setWindowTitle(QApplication::translate("ShoppingPage1", "Dialog", 0));
         label->setText(QApplication::translate("ShoppingPage1", "SHOPPING LIST", 0));
-        swapButton->setText(QApplication::translate("ShoppingPage1", "<->", 0));
+        swapButton->setText(QString());
         label_2->setText(QApplication::translate("ShoppingPage1", "LOW ON:", 0));
         pushButton_3->setText(QApplication::translate("ShoppingPage1", "Add", 0));
         pushButton_2->setText(QApplication::translate("ShoppingPage1", "Save", 0));

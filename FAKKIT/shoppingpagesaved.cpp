@@ -34,7 +34,7 @@ ShoppingPageSaved::ShoppingPageSaved(QWidget *parent) :
     ui->pushButton->setStyleSheet("font: bold 32px; color: white;");
     ui->pushButton_2->setStyleSheet("font: bold 32px; color: white;");
     ui->pushButton_3->setStyleSheet("font: bold 32px; color: white;");
-    //ui->swapButton2->setStyleSheet("background-image: url(:/pics/dblarrow.png) 0 0 0 0 stretch stretch; background-position: center; background-repeat: repeat-false;");
+    ui->swapButton2->setStyleSheet("background-image: url(:/pics/prev.png) 0 0 0 0 stretch stretch; background-position: center; background-repeat: repeat-false;");
 
     //keyboard upon lineedit
     lineEditkeyboard = new Keyboard();
