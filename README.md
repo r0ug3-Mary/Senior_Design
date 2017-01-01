@@ -1,4 +1,6 @@
 # Senior_Design
+Joint venture on a senior design project.  This repo is for the GUI application only.  The project can be seen at https://youtu.be/yZX6tAFQXEc.
+
 Combined file structure of all project parts.
 *********************************************************************************************************************
 Standards:
